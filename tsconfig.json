@@ -1,28 +1,50 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "baseUrl": ".",
+        "paths": {
+            // Public
+            "@public/*": ["./public/*"],
+
+            // Partials
+            "@providers/*": ["./src/components/partials/providers/*"],
+            "@containers/*": ["./src/components/partials/containers/*"],
+
+            // Templates
+            "@templates/*": ["./src/components/templates/*"],
+
+            // UI
+            "@atoms/*": ["./src/components/UI/atoms/*"],
+            "@molecules/*": ["./src/components/UI/molecules/*"],
+            "@organisms/*": ["./src/components/UI/organisms/*"],
+
+            // Core
+            "@api/*": ["./src/core/api/*"],
+            "@coreTypes/*": ["./src/core/types/*"],
+            "@utils/*": ["./src/core/utils/*"],
+
+            // Styles
+            "@styles/*": ["./src/styles/*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "*.js"],
+    "exclude": ["node_modules"]
 }

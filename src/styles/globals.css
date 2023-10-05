@@ -1,0 +1,10 @@
+/* Tailwind */
+@tailwind components;
+@tailwind utilities;
+
+
+/* Vendors */
+@import './vendors/tailwind.css';
+
+/* Base */
+@import './base/base.css';
