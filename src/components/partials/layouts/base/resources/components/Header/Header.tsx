@@ -4,7 +4,6 @@ import { type FC, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Popover } from '@mantine/core'
 import {
     IconAddressBook,
     IconBell,
@@ -19,6 +18,7 @@ import {
 import { Button } from '@atoms/Button'
 import { Drawer } from '@atoms/Drawer'
 import { Input } from '@atoms/Input'
+import { Popover } from '@atoms/Popover'
 
 import logoImage from '@public/images/base/logo.jpg'
 
@@ -155,8 +155,7 @@ const Header: FC = () => {
                             {/* Popup */}
                             <Popover
                                 opened={opened}
-                                position='bottom'
-                                withArrow
+                                dropdownClassName='bg-[#21242D] border-gray-500 -left-[82px] text-white'
                                 styles={{
                                     arrow: {
                                         right: '18%',
@@ -170,24 +169,22 @@ const Header: FC = () => {
                                 }}
                             >
                                 {/* Popup Dropdown */}
-                                <Popover.Dropdown className='bg-[#21242D] border-gray-500 -left-[82px]   text-white'>
-                                    <div className='flex flex-col  min-w-[110px] font-medium'>
-                                        {/* Profile Icon */}
-                                        <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer px-6 hover:bg-[#1c1f27] justify-between  '>
-                                            <span className='text-gray-400'>Profile</span>
-                                            <IconAddressBook className='text-gray-400 ' size={23} />
-                                        </div>
-
-                                        {/* Line */}
-                                        <hr className='border-gray-500' />
-
-                                        {/* Logout Icon */}
-                                        <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer hover:bg-[#1c1f27] px-6 justify-between '>
-                                            <span className='text-gray-400'>Log Out</span>
-                                            <IconLogout className='text-red-400 ' size={21} />
-                                        </div>
+                                <div className='flex flex-col  min-w-[110px] font-medium'>
+                                    {/* Profile Icon */}
+                                    <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer px-6 hover:bg-[#1c1f27] justify-between  '>
+                                        <span className='text-gray-400'>Profile</span>
+                                        <IconAddressBook className='text-gray-400 ' size={23} />
                                     </div>
-                                </Popover.Dropdown>
+
+                                    {/* Line */}
+                                    <hr className='border-gray-500' />
+
+                                    {/* Logout Icon */}
+                                    <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer hover:bg-[#1c1f27] px-6 justify-between '>
+                                        <span className='text-gray-400'>Log Out</span>
+                                        <IconLogout className='text-red-400 ' size={21} />
+                                    </div>
+                                </div>
                             </Popover>
                         </div>
                     </div>

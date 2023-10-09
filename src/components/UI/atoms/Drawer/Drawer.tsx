@@ -1,10 +1,8 @@
 import React, { type FC } from 'react'
-import { Drawer } from '@mantine/core'
+import { Drawer, type DrawerProps } from '@mantine/core'
 import { IconX } from '@tabler/icons-react'
 
-import { type IDrawerProps } from './resources'
-
-const ModalDrawer: FC<IDrawerProps> = ({
+const ModalDrawer: FC<DrawerProps> = ({
     size = 'xs',
     opened = false,
     transitionProps = { duration: 150, timingFunction: 'linear' },
@@ -16,6 +14,7 @@ const ModalDrawer: FC<IDrawerProps> = ({
         content: { backgroundColor: '#000000fa' },
         header: { display: 'none' },
     },
+    ...rest
 }) => {
     return (
         <Drawer
@@ -27,6 +26,7 @@ const ModalDrawer: FC<IDrawerProps> = ({
             size={size}
             styles={styles}
             closeButtonProps={<IconX />}
+            {...rest}
         >
             {children}
         </Drawer>
