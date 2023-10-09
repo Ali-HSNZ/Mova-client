@@ -11,4 +11,8 @@ type TSidebarLink = {
     title: string
 }
 
-export type { TSidebarLink, ISidebarLinkDetail }
+interface ISidebarProps {
+    isResponsiveModal?: boolean
+}
+
+export type { TSidebarLink, ISidebarProps, ISidebarLinkDetail }

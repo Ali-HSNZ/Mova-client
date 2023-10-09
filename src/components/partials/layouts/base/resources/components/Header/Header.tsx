@@ -174,9 +174,9 @@ const Header: FC = () => {
                         <IconX onClick={() => setDrawer(false)} />
                     </div>
 
-                    <Sidebar />
+                    <Sidebar isResponsiveModal={true} />
 
-                    <div className='flex items-start flex-col mt-12'>
+                    <div className='flex items-start flex-col mt-8'>
                         <span className='text-gray-400 px-2 mb-2 font-medium text-base '>Categories</span>
                         <div className='px-2 flex items-start  flex-col'>
                             {categoriesData.map((items) => (

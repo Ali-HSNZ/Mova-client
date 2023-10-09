@@ -4,13 +4,16 @@ import { type FC } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { MENU_LINKS } from './resources'
+import { type ISidebarProps, MENU_LINKS } from './resources'
 
-const Sidebar: FC = () => {
+const Sidebar: FC<ISidebarProps> = ({ isResponsiveModal }) => {
     const pathname = usePathname()
 
+    // if sidebar rendered in responsive modal, sidebar position in sticky
+    const responsiveSidebarClassName = isResponsiveModal ? '' : 'sticky top-0 h-screen'
+
     return (
-        <aside className={` shrink-0 lg:w-[230px]`}>
+        <aside className={`${responsiveSidebarClassName} overflow-y-auto shrink-0 lg:w-[230px]`}>
             <nav className='flex flex-col h-full pt-6 gap-y-8'>
                 {/* Map All Links */}
                 {MENU_LINKS.map((item) => (
