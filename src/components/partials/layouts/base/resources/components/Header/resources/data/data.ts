@@ -1,19 +1,20 @@
-import { type TCategoriesDataHeader } from '..'
+import { type THeaderMenuLink } from '..'
 
-export const categoriesData: TCategoriesDataHeader[] = [
+const headerMenuLinksData: THeaderMenuLink[] = [
     {
         id: 0,
-        name: 'Movies',
-        link: '/category/movies',
+        title: 'Movies',
+        href: '/category/movies',
     },
     {
         id: 1,
-        name: 'Series',
-        link: '/category/series',
+        title: 'Series',
+        href: '/category/series',
     },
     {
         id: 2,
-        name: 'Anime',
-        link: '/category/anime',
+        title: 'Anime',
+        href: '/category/anime',
     },
 ]
+export default headerMenuLinksData

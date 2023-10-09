@@ -1,5 +1,6 @@
-export type TCategoriesDataHeader = {
-    name: string
-    link: string
+type THeaderMenuLink = {
+    title: string
+    href: string
     id: number
 }
+export default THeaderMenuLink

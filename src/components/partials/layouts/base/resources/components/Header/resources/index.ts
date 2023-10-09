@@ -1,5 +1,4 @@
-import { categoriesData } from './data/data'
-import { type TCategoriesDataHeader } from './types/types'
+import headerMenuLinksData from './data/data'
+import type THeaderMenuLink from './types/types'
 
-export type { TCategoriesDataHeader }
-export { categoriesData }
+export { headerMenuLinksData, type THeaderMenuLink }
