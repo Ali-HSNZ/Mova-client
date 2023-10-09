@@ -1,5 +1,4 @@
 import { type MantineThemeOverride } from '@mantine/core'
-import stylisRTLPlugin from 'stylis-plugin-rtl'
 
 const customMantineTheme: MantineThemeOverride = {
     breakpoints: {
@@ -15,9 +14,8 @@ const customMantineTheme: MantineThemeOverride = {
 }
 
 // used 'stylis-plugin-rtl' Package For Set Mantine RTL Direction
-const customRtlCache = {
-    key: 'mantine-rtl',
-    stylisPlugins: [stylisRTLPlugin],
+const customLtrCache = {
+    key: 'mantine-ltr',
 }
 
-export { customMantineTheme, customRtlCache }
+export { customMantineTheme, customLtrCache }

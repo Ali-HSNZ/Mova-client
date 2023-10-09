@@ -3,6 +3,13 @@
     "scm.diffDecorationsIgnoreTrimWhitespace": "true",
     "files.trimTrailingWhitespace": true,
 
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#fff" //? Line Color
+    },
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 25, //? Tab width
+    "editor.mouseWheelZoom": true, //? Enable Zoom with mouse scroll - Default is False
+
     // eslint extension options
     "eslint.enable": true,
     "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"],

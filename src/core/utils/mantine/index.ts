@@ -1,3 +1,3 @@
-import { customMantineTheme, customRtlCache } from './mantine.utils'
+import { customLtrCache, customMantineTheme } from './mantine.utils'
 
-export { customMantineTheme, customRtlCache }
+export { customMantineTheme, customLtrCache }

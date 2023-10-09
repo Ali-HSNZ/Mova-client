@@ -3,13 +3,13 @@
 import { type FC } from 'react'
 import { useServerInsertedHTML } from 'next/navigation'
 import { createEmotionCache, MantineProvider } from '@mantine/core'
-import { customMantineTheme, customRtlCache } from '@utils/mantine'
+import { customLtrCache, customMantineTheme } from '@utils/mantine'
 
 import { type ILayoutProps } from '@coreTypes/layouts'
 
 const Providers: FC<ILayoutProps> = ({ children }) => {
     // Create an Emotion cache based on the rtl direction.
-    const cache = createEmotionCache(customRtlCache)
+    const cache = createEmotionCache(customLtrCache)
     cache.compat = true // Enable compatibility mode for the cache.
 
     // Use the useServerInsertedHTML hook to insert cached styles on the server side. (Disabling Flush action on the server to prevent styling issues in the client)

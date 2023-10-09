@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html dir='rtl' lang='fa' className={`${iranYekanFont.variable} font-sans`}>
+        <html dir='ltr' lang='en' className={`${iranYekanFont.variable} font-sans bg-black`}>
             <body>
                 <MantineProvider>{children}</MantineProvider>
             </body>
