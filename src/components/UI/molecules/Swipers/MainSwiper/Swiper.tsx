@@ -1,86 +1,20 @@
 'use client'
-import { type FC } from 'react'
-import Image from 'next/image'
-import { Pagination } from 'swiper/modules'
-import { SwiperSlide, useSwiper } from 'swiper/react'
-import { IconChevronLeft, IconChevronRight, IconPlayerPlay, IconPlus } from '@tabler/icons-react'
+
+import { Navigation, Pagination } from 'swiper/modules'
 
 import { Swiper } from '@atoms/Swiper'
 
-import { type IMainSwiperProps, type TSwiperButtonProps } from './resources'
-
-const MainSwiper: FC<IMainSwiperProps> = ({ dataSwiper }) => {
-    // Custom Swiper next and prev Action Button
-    const SwiperButtons: FC<TSwiperButtonProps> = ({ action }): JSX.Element => {
-        const Swiper = useSwiper()
-        return (
-            <div
-                className='flex justify-center items-center text-3xl p-2 rounded-lg bg-opacity-20 bg-gray-500 cursor-pointer'
-                onClick={() => (action === 'next' ? Swiper.slideNext() : Swiper.slidePrev())}
-            >
-                {action === 'next' ? <IconChevronLeft /> : <IconChevronRight />}
-            </div>
-        )
-    }
-
+const MainSwiper = ({ children }: { children: JSX.Element }) => {
     return (
-        <div>
-            <Swiper
-                pagination={{ clickable: true, dynamicBullets: true }} // Enable clickable pagination
-                modules={[Pagination]}
-                spaceBetween={10}
-                className='mySwiper h-[320px] rounded-lg '
-                isLoop
-            >
-                <>
-                    {dataSwiper.map((movie) => {
-                        return (
-                            <SwiperSlide key={movie.id}>
-                                {/* movie Image */}
-                                <Image
-                                    src={movie.imageSrc}
-                                    alt={movie.name}
-                                    width={800}
-                                    height={320}
-                                    className='w-full min-h-full object-cover'
-                                />
-
-                                {/* movie Title */}
-                                <span className='absolute top-8 left-8 text-xl md:text-3xl font-bold  text-white'>
-                                    {movie.name}
-                                </span>
-
-                                {/* Action Buttons --> 'Watch Now' Button */}
-                                <div className='absolute bottom-5 text-white font-bold right-5 z-10'>
-                                    <div className='p-3 xl:px-8 xl:py-3 flex items-center justify-center cursor-pointer shadow-lg rounded-full xl:rounded-lg bg-yellow-400 '>
-                                        <span className='text-dark-950 hidden xl:flex text-black'> Watch Now</span>
-                                        <IconPlayerPlay className='flex   text-black text-2xl xl:hidden' />
-                                    </div>
-                                </div>
-
-                                {/* Action Buttons --> 'WatchList' Button */}
-                                <div className='absolute bottom-5 text-white font-bold left-5 z-10'>
-                                    <div className='p-3 xl:px-8 xl:py-3 flex items-center justify-center gap-x-1.5 shadow-lg rounded-full xl:rounded-lg bg-gray-500  cursor-pointer bg-opacity-60	'>
-                                        <IconPlus className='text-lg ' />
-                                        <span className='hidden xl:block'>Watchlist</span>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })}
-
-                    {/* Custom Next Button */}
-                    <div className='absolute left-0 pl-5 top-1/2 transform -translate-y-1/2 z-10 text-white'>
-                        <SwiperButtons action='next' />
-                    </div>
-
-                    {/* Custom Prev Button */}
-                    <div className='absolute right-0 pr-5 top-1/2 transform -translate-y-1/2 z-10 text-white'>
-                        <SwiperButtons action='prev' />
-                    </div>
-                </>
-            </Swiper>
-        </div>
+        <Swiper
+            pagination={{ clickable: true, dynamicBullets: true }} // Enable clickable pagination
+            modules={[Pagination, Navigation]}
+            spaceBetween={10}
+            className='_swiper relative h-[320px] rounded-lg'
+            isLoop
+        >
+            {children}
+        </Swiper>
     )
 }
 

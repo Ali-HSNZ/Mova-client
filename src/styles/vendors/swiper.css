@@ -1,0 +1,50 @@
+/* Change Swiper Active Bullet Color */
+.swiper-pagination-bullet-active {
+    background-color: #FACC15 !important;
+}
+
+/* Hidden Default Next Navigation Icon */
+._swiper .swiper-button-next::after {
+    display: none;
+}
+
+/* Hidden Default Prev Navigation Icon */
+._swiper .swiper-button-prev::after {
+    display: none;
+}
+
+/* Change Next Button Styles And Icon  */
+._swiper .swiper-button-next {
+    --swiper-navigation-size: 20px;
+    background-color: rgba(0, 0, 0, 0.356);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 0px;
+
+    position: absolute;
+    right: 11px !important;
+
+    /*! Change Icon */
+    background-image: url(../../../public/images/base/right-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position: center;
+}
+
+/* Change Prev Button Styles And Icon  */
+._swiper .swiper-button-prev {
+    --swiper-navigation-size: 20px;
+    background-color: rgba(0, 0, 0, 0.356);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px !important;
+
+
+    /*! Change Icon */
+    background-image: url(../../../public/images/base/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position: center;
+
+}

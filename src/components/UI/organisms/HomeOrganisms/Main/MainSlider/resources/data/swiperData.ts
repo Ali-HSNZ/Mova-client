@@ -1,4 +1,4 @@
-import { type TMainSwiperData } from '@molecules/Swipers/MainSwiper/resources'
+import { type TMainSwiperData } from '..'
 
 import AnimationSpiderman from '@public/images/slider/animationSpiderMan.jpg'
 import Annabel from '@public/images/slider/Annable.jpg'

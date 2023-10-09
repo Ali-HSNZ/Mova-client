@@ -1,7 +1,6 @@
 'use client'
 
 import { type FC } from 'react'
-import { Pagination } from 'swiper/modules'
 import { Swiper } from 'swiper/react'
 
 import 'swiper/css/pagination'
@@ -12,7 +11,7 @@ import { type ICustomSwiperProps } from './resources'
 
 const CustomSwiper: FC<ICustomSwiperProps> = ({
     children,
-    modules = [Pagination],
+    modules,
     spaceBetween = 10,
     className = '',
     pagination,
@@ -22,6 +21,7 @@ const CustomSwiper: FC<ICustomSwiperProps> = ({
     return (
         <Swiper
             pagination={pagination}
+            navigation
             modules={modules}
             spaceBetween={spaceBetween}
             className={className}
