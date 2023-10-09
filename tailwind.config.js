@@ -11,7 +11,7 @@ module.exports = {
                 secondary: '#fff',
             },
             fontFamily: {
-                sans: ['var(--font-iranyekan)'],
+                sans: ['var(--font-openSans)'],
             },
         },
     },

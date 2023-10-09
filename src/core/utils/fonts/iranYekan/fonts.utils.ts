@@ -3,42 +3,42 @@ import localFont from 'next/font/local'
 const iranYekanFonts = localFont({
     src: [
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebThin.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebThin.ttf',
             weight: '100',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebLight.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebLight.ttf',
             weight: '300',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebRegular.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebRegular.ttf',
             weight: '400',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebMedium.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebMedium.ttf',
             weight: '500',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebBold.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebBold.ttf',
             weight: '600',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebExtraBold.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebExtraBold.ttf',
             weight: '700',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebBlack.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebBlack.ttf',
             weight: '800',
             style: 'normal',
         },
         {
-            path: '../../../../public/fonts/ttf/IRANYekanWebExtraBlack.ttf',
+            path: '../../../../../public/fonts/iranYekan/ttf/IRANYekanWebExtraBlack.ttf',
             weight: '900',
             style: 'normal',
         },

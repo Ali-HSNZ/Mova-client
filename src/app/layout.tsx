@@ -1,5 +1,5 @@
 import { MantineProvider } from '@providers/mantine'
-import { iranYekanFont } from '@utils/fonts'
+import { openSansFont } from '@utils/fonts/openSans'
 
 import '@styles/globals.css'
 
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html dir='ltr' lang='en' className={`${iranYekanFont.variable} font-sans bg-black`}>
+        <html dir='ltr' lang='en' className={`${openSansFont.variable} font-sans bg-black`}>
             <body>
                 <MantineProvider>{children}</MantineProvider>
             </body>
