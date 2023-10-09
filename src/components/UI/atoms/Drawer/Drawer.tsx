@@ -7,12 +7,15 @@ import { type IDrawerProps } from './resources'
 const ModalDrawer: FC<IDrawerProps> = ({
     size = 'xs',
     opened = false,
-    transitionProps = {},
+    transitionProps = { duration: 150, timingFunction: 'linear' },
     className = '',
     onClose,
     children,
     title = '',
-    styles,
+    styles = {
+        content: { backgroundColor: '#000000fa' },
+        header: { display: 'none' },
+    },
 }) => {
     return (
         <Drawer

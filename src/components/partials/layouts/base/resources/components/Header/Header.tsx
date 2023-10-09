@@ -1,13 +1,20 @@
 'use client'
+
 import { type FC, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { AiOutlineUser } from 'react-icons/ai'
-import { CgProfile } from 'react-icons/cg'
-import { MdLogout, MdOutlineNotificationsActive } from 'react-icons/md'
 import { Popover } from '@mantine/core'
-import { IconFilter, IconMenu2, IconSearch, IconX } from '@tabler/icons-react'
+import {
+    IconAddressBook,
+    IconBell,
+    IconFilter,
+    IconLogout,
+    IconMenu2,
+    IconSearch,
+    IconUser,
+    IconX,
+} from '@tabler/icons-react'
 
 import { Button } from '@atoms/Button'
 import { Drawer } from '@atoms/Drawer'
@@ -15,16 +22,38 @@ import { Input } from '@atoms/Input'
 
 import logoImage from '@public/images/base/logo.jpg'
 
-import { headerMenuLinksData } from './resources'
+import { DrawerMenu, headerMenuLinksData } from './resources'
 import { Sidebar } from '../Sidebar'
 
 const Header: FC = () => {
     const pathname = usePathname()
+
     const [opened, setOpened] = useState(false)
     const [drawer, setDrawer] = useState(false)
 
     return (
         <>
+            {/**
+             * Menu Modal --- In Responsive Mode
+             * After Clicked on Menu Button --> This Modal Showed
+             */}
+            <Drawer opened={drawer} onClose={() => setDrawer(false)} className='block lg:hidden relative'>
+                <>
+                    <div className='absolute top-6 right-6 text-3xl text-gray-400'>
+                        <IconX onClick={() => setDrawer(false)} />
+                    </div>
+
+                    <Sidebar isResponsiveModal={true} />
+
+                    {/**
+                     * Category Links
+                     * Menu Links
+                     * Movie - Series - Anime - ...
+                     */}
+                    <DrawerMenu />
+                </>
+            </Drawer>
+
             <div className='flex gap-x-6 md:gap-x-10 w-full  pt-6 px-6 '>
                 {/* Menu Button ---- Showed in Responsive ----  >lg: hidden */}
                 <Button
@@ -100,7 +129,7 @@ const Header: FC = () => {
                     <div className='sm:col-span-2 flex items-center justify-end xl:justify-between gap-6 text-center'>
                         {/* Notification Button */}
                         <Button className='bg-[#21242D] relative p-[24px] rounded-md'>
-                            <MdOutlineNotificationsActive
+                            <IconBell
                                 size={22}
                                 className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
                             />
@@ -117,7 +146,7 @@ const Header: FC = () => {
                                 className=' bg-[#21242D] relative p-[24px] rounded-md'
                                 onClick={() => setOpened((o) => !o)}
                             >
-                                <AiOutlineUser
+                                <IconUser
                                     size={22}
                                     className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
                                 />
@@ -146,7 +175,7 @@ const Header: FC = () => {
                                         {/* Profile Icon */}
                                         <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer px-6 hover:bg-[#1c1f27] justify-between  '>
                                             <span className='text-gray-400'>Profile</span>
-                                            <CgProfile className='text-gray-400 ' size={23} />
+                                            <IconAddressBook className='text-gray-400 ' size={23} />
                                         </div>
 
                                         {/* Line */}
@@ -155,7 +184,7 @@ const Header: FC = () => {
                                         {/* Logout Icon */}
                                         <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer hover:bg-[#1c1f27] px-6 justify-between '>
                                             <span className='text-gray-400'>Log Out</span>
-                                            <MdLogout className='text-red-400 ' size={21} />
+                                            <IconLogout className='text-red-400 ' size={21} />
                                         </div>
                                     </div>
                                 </Popover.Dropdown>
@@ -163,50 +192,6 @@ const Header: FC = () => {
                         </div>
                     </div>
                 </div>
-                <Drawer
-                    opened={drawer}
-                    onClose={() => setDrawer(false)}
-                    className='block lg:hidden relative'
-                    transitionProps={{ duration: 150, timingFunction: 'linear' }}
-                    styles={{
-                        content: { backgroundColor: '#000000fa' },
-                        header: { display: 'none' },
-                    }}
-                >
-                    <>
-                        <div className='absolute top-6 right-6 text-3xl text-gray-400'>
-                            <IconX onClick={() => setDrawer(false)} />
-                        </div>
-
-                        <Sidebar isResponsiveModal={true} />
-
-                        <div className='flex items-start flex-col mt-8'>
-                            <span className='text-gray-400 px-2 mb-2 font-medium text-base '>Categories</span>
-                            <div className='px-2 flex items-start  flex-col'>
-                                {headerMenuLinksData.map((link) => (
-                                    <Link key={link.id} href={link.href}>
-                                        <div
-                                            className={`w-full justify-between flex items-center duration-200 ${
-                                                pathname === link?.href
-                                                    ? 'text-yellow-400'
-                                                    : 'hover:text-yellow-300 text-secondary'
-                                            } `}
-                                        >
-                                            <div
-                                                className={`flex border-r-2 ${
-                                                    pathname === link?.href ? 'border-yellow-400' : 'border-transparent'
-                                                } w-full items-center p-2 gap-x-3`}
-                                            >
-                                                {/* Link Name */}
-                                                <p className={`font-normal text-sm`}>{link.title}</p>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    </>
-                </Drawer>
             </div>
 
             {/* Search Input in Responsive Mode*/}
