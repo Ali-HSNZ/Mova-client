@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* ---------------------- Vendors ---------------------- */
 
 /* Tailwind */
@@ -10,6 +9,7 @@
 
 /* Swiper */
 @import './vendors/swiper.css';
+
 
 
 

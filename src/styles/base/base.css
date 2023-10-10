@@ -7,5 +7,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-[#ffcc00] hover:bg-gray-600 rounded;
+    @apply bg-scrollColor hover:bg-scrollHover rounded;
 }

@@ -5,16 +5,34 @@ module.exports = {
     theme: {
         extend: {
             brightness: {
-                10: '.10',
-                20: '.20',
-                30: '.30',
-                40: '.40',
+                primary: '.70',
+                secondary: '.30',
+            },
+            opacity: {
+                secondary: '.4',
+                primary: '.7',
+                full: '1',
             },
             colors: {
+                // Yellow
                 yellowPrimary: '#FACC15',
-                yellowSecondary: '#FDE047',
-                primary: '#fff',
-                secondary: '#fff',
+                yellowSecondary: '#fde68a',
+
+                // Gray
+                graySecondary: '#94a3b8',
+                grayPrimary: '#374151',
+
+                // White
+                whitePrimary: '#e2e8f0',
+                whiteSecondary: '#d1d5db',
+
+                // Red
+                redSecondary: '#f87171',
+                redPrimary: '#dc2626',
+
+                // Scroll Color
+                scrollColor: '#FACC15', // fill
+                scrollHover: '#6b7280', // on hover
             },
             fontFamily: {
                 sans: ['var(--font-quickSand)'],

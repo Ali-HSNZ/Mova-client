@@ -1,58 +1,17 @@
 /*! -------------------------- Main Swiper --------------------------*/
-/* Change Swiper Active Bullet Color */
+/* Bullet parent */
+._mainSwiper .swiper-pagination-bullets-dynamic {
+    @apply py-[9px] bg-grayPrimary bg-opacity-primary mb-5 rounded-md
+}
+
+/* Bullet Active */
 ._mainSwiper .swiper-pagination-bullet-active {
     background-color: #FACC15 !important;
 }
 
-/* Hidden Default Navigation Icon */
-._mainSwiper .swiper-button-next::after,
-._mainSwiper .swiper-button-prev::after {
-    display: none;
-}
-
-
-/* Change Next Button Styles And Icon  */
-._mainSwiper .swiper-button-next {
-    --swiper-navigation-size: 20px;
-    background-color: rgba(0, 0, 0, 0.356);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 0 0px;
-
-    position: absolute;
-    right: 11px !important;
-
-    /** Change Icon */
-    background-image: url(../../../public/images/base/right-arrow.png);
-    background-repeat: no-repeat;
-    background-size: 60% auto;
-    background-position: center;
-}
-
-/* Change Prev Button Styles And Icon  */
-._mainSwiper .swiper-button-prev {
-    --swiper-navigation-size: 20px;
-    background-color: rgba(0, 0, 0, 0.356);
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    right: 0px !important;
-
-
-    /** Change Icon */
-    background-image: url(../../../public/images/base/left-arrow.png);
-    background-repeat: no-repeat;
-    background-size: 60% auto;
-    background-position: center;
-
-}
-
-._mainSwiper .swiper-pagination-bullets-dynamic {
-    @apply py-[9px] bg-gray-400 bg-opacity-60 mb-5 rounded-md
-}
-
+/* Each Bullet */
 ._mainSwiper .swiper-pagination-bullet {
-    @apply w-2.5 h-2.5 bg-white opacity-100
+    @apply w-2.5 h-2.5 bg-whitePrimary opacity-full
 }
 
 /*!-------------------------- Mini Swiper--------------------------*/

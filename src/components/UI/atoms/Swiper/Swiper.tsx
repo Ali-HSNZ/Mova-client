@@ -1,24 +1,19 @@
-'use client'
-
-import { type FC } from 'react'
-import { Swiper } from 'swiper/react'
-import { type SwiperOptions } from 'swiper/types'
+// Import necessary dependencies
+import React, { forwardRef } from 'react'
+import { Swiper, type SwiperClass, type SwiperProps } from 'swiper/react'
 
 import 'swiper/css'
 
-import { type ICustomSwiperOptions } from './resources'
-
-const CustomSwiper: FC<ICustomSwiperOptions & SwiperOptions> = ({
-    children,
-    spaceBetween = 10,
-    className = '',
-    ...rest
-}) => {
+type TSwiper = SwiperClass & SwiperProps
+// Define your CustomSwiper component
+const CustomSwiper = forwardRef<TSwiper, SwiperProps>(({ children, className = '', ...rest }, ref) => {
     return (
-        <Swiper navigation spaceBetween={spaceBetween} className={className} {...rest}>
+        <Swiper ref={ref} className={className} {...rest}>
             {children}
         </Swiper>
     )
-}
+})
+
+CustomSwiper.displayName = 'Swiper'
 
 export default CustomSwiper

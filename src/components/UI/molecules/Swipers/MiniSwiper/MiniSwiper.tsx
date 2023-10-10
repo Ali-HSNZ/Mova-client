@@ -3,10 +3,11 @@
 import { type FC, useCallback, useRef, useState } from 'react'
 import Link from 'next/link'
 import { FreeMode } from 'swiper/modules'
-import { Swiper, type SwiperClass } from 'swiper/react'
+import { type SwiperClass } from 'swiper/react'
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
 
 import { Button } from '@atoms/Button'
+import { Swiper } from '@atoms/Swiper'
 
 import 'swiper/css/navigation'
 import 'swiper/css/free-mode'
@@ -37,18 +38,18 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
         swiperRef.current.swiper.slideNext()
     }, [])
 
-    // active button ---> className
-    const activeButtonClass = 'px-0 text-yellow-400 transition-all duration-300 bg-transparent'
+    // Active button className
+    const activeButtonClass = 'text-yellowPrimary'
 
-    // prev button ----> className
-    const inactiveButtonClass = 'cursor-default px-0 text-gray-400 transition-all duration-300 bg-transparent'
+    // Disable button  className
+    const disableButtonClass = 'cursor-default text-graySecondary'
 
-    // Prev Button State  ---> Active | Inactive (className)
-    const prevButtonClass = activeIndex === 0 ? inactiveButtonClass : activeButtonClass
+    // Prev Button State  ---> Active | Disable (className)
+    const prevButtonClass = activeIndex === 0 ? disableButtonClass : activeButtonClass
 
-    // Next Button State  ---> Active | Inactive (className)
+    // Next Button State  ---> Active | Disable (className)
     const nextButtonClass =
-        activeIndex === swiperRef.current?.swiper.slides.length - 1 ? inactiveButtonClass : activeButtonClass
+        activeIndex === swiperRef.current?.swiper.slides.length - 1 ? disableButtonClass : activeButtonClass
 
     return (
         <div className='relative'>
@@ -56,22 +57,28 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
                 {/* Section Title And Action Buttons */}
                 <div className='flex items-center gap-x-2'>
                     {/* Section Title */}
-                    <h1 className='font-bold text-xl text-gray-200'>{title}</h1>
+                    <h1 className='font-bold text-xl text-whitePrimary'>{title}</h1>
 
                     {/* Prev Button And Next Button */}
                     <div>
                         {/* Prev Button */}
-                        <Button className={prevButtonClass} onClick={handlePrev}>
+                        <Button
+                            className={`${prevButtonClass} px-0 transition-all duration-300 bg-transparent`}
+                            onClick={handlePrev}
+                        >
                             <IconChevronLeft />
                         </Button>
                         {/* Next Button */}
-                        <Button className={nextButtonClass} onClick={handleNext}>
+                        <Button
+                            className={`${nextButtonClass} px-0 transition-all duration-300 bg-transparent`}
+                            onClick={handleNext}
+                        >
                             <IconChevronRight />
                         </Button>
                     </div>
                 </div>
                 {/* Section Link ----> (See More | More Detail | ...) */}
-                <Link href={seeMoreLinkHref} className='flex items-center text-sm text-gray-300'>
+                <Link href={seeMoreLinkHref} className='flex items-center text-sm text-graySecondary'>
                     {/* Link Title */}
                     {seeMoreLinkTitle}
 

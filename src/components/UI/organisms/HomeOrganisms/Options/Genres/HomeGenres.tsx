@@ -25,13 +25,15 @@ const HomeGenres: FC = () => {
                                     >
                                         {/* Genre Image */}
                                         <div
-                                            className='filter brightness-30 h-[100px] w-full  text-white bg-cover  rounded'
+                                            className='filter brightness-secondary h-[100px] w-full  text-whitePrimary bg-cover  rounded'
                                             style={{ backgroundImage: `url('${genreDetail.imageSrc}')` }}
                                         ></div>
 
                                         {/* Genre Title */}
-                                        <div className='absolute left-1/2 top-1/2 transform text-center -translate-x-1/2 -translate-y-1/2 w-full p-2 text-white'>
-                                            <span className='text-lg font-semibold'>{genreDetail.title} </span>
+                                        <div className='absolute left-1/2 top-1/2 transform text-center -translate-x-1/2 -translate-y-1/2 w-full p-2 '>
+                                            <span className='text-whiteSecondary text-lg font-semibold'>
+                                                {genreDetail.title}{' '}
+                                            </span>
                                         </div>
                                     </Link>
                                 ))}

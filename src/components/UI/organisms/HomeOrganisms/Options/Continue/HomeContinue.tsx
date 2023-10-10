@@ -18,7 +18,7 @@ const HomeContinue: FC = () => {
                 <>
                     {dataSwiper.map((movie: THomeContinueMovieData) => (
                         <SwiperSlide key={movie.id}>
-                            <article className='bg-[#16181E] select-none w-[250px] flex flex-col text-white p-3   rounded '>
+                            <article className='bg-[#16181E] select-none w-[250px] flex flex-col text-whitePrimary p-3   rounded '>
                                 {/* Movie Detail */}
                                 <div className='flex gap-x-4 '>
                                     {/* Movie Image */}
@@ -35,10 +35,10 @@ const HomeContinue: FC = () => {
 
                                     <div className='flex-grow flex flex-col gap-y-2'>
                                         {/* Movie Title */}
-                                        <span className='font-bold text-md truncate'>{movie.title}</span>
+                                        <span className='font-bold text-md truncate text-whiteSecondary'>{movie.title}</span>
 
                                         {/* Movie Episode Left  */}
-                                        <span className='text-sm font-medium text-gray-400'>
+                                        <span className='text-sm font-medium text-graySecondary'>
                                             {movie.episodeLeft} Episode Left
                                         </span>
 
@@ -50,12 +50,12 @@ const HomeContinue: FC = () => {
                                 {/* Action Buttons*/}
                                 <div className='flex justify-between gap-x-4 mt-3'>
                                     {/* Drop Button */}
-                                    <Button className='w-fit h-11 shadow-lg rounded-md bg-gray-700 font-bold'>
+                                    <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary text-whitePrimary font-semibold'>
                                         Drop
                                     </Button>
 
                                     {/* Watch Button */}
-                                    <Button className='w-full h-11 shadow-lg rounded-md bg-yellow-400 font-bold text-black'>
+                                    <Button className='w-full h-11 shadow-lg rounded-md bg-yellowPrimary font-semibold text-black'>
                                         Watch
                                     </Button>
                                 </div>

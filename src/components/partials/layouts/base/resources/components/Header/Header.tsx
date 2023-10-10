@@ -39,9 +39,9 @@ const Header: FC = () => {
              */}
             <Drawer opened={drawer} onClose={() => setDrawer(false)} className='block lg:hidden relative'>
                 <>
-                    <div className='absolute top-6 right-6 text-3xl text-gray-400'>
+                    <Button className='absolute p-0 top-6 right-6 text-3xl bg-transparent text-graySecondary'>
                         <IconX onClick={() => setDrawer(false)} />
-                    </div>
+                    </Button>
 
                     <Sidebar isResponsiveModal={true} />
 
@@ -58,11 +58,11 @@ const Header: FC = () => {
                 {/* Menu Button ---- Showed in Responsive ----  >lg: hidden */}
                 <Button
                     onClick={() => setDrawer(true)}
-                    className=' bg-[#21242D] relative p-[24px] rounded-md  block lg:hidden'
+                    className=' bg-grayPrimary relative p-[24px] rounded-md  block lg:hidden'
                 >
                     <IconMenu2
                         size={22}
-                        className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
+                        className='text-whiteSecondary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
                     />
                 </Button>
 
@@ -77,15 +77,15 @@ const Header: FC = () => {
                     <div className='hidden sm:flex col-span-6 md:col-span-6 text-center justify-between items-center '>
                         {/* Menu Links Section */}
                         <div className='hidden lg:flex items-start gap-x-4'>
-                            {/* Map Links */}
+                            {/* Render Links */}
                             {headerMenuLinksData.map((link) => (
                                 <Link key={link.id} href={link.href}>
                                     {/* Link title */}
                                     <h1
                                         className={`font-normal  border-b-2  px-2 ${
                                             pathname.includes(link.href)
-                                                ? 'text-yellow-400 border-yellow-400'
-                                                : 'text-secondary border-transparent'
+                                                ? 'text-yellowPrimary border-yellowPrimary'
+                                                : 'hover:text-yellowSecondary text-whitePrimary border-transparent'
                                         } `}
                                     >
                                         {link.title}
@@ -115,12 +115,12 @@ const Header: FC = () => {
                             {/* Search icon */}
                             <IconSearch
                                 size={20}
-                                className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-2.5'
+                                className='text-grayPrimary absolute top-1/2 -translate-y-1/2 left-2.5'
                             />
                             {/* filter icon */}
                             <IconFilter
                                 size={20}
-                                className='text-gray-400 absolute top-1/2 -translate-y-1/2 right-2.5'
+                                className='text-grayPrimary absolute top-1/2 -translate-y-1/2 right-2.5'
                             />
                         </div>
                     </div>
@@ -128,34 +128,34 @@ const Header: FC = () => {
                     {/* Profile */}
                     <div className='sm:col-span-2 flex items-center justify-end xl:justify-between gap-6 text-center'>
                         {/* Notification Button */}
-                        <Button className='bg-[#21242D] relative p-[24px] rounded-md'>
+                        <Button className='bg-grayPrimary relative p-[24px] rounded-md'>
                             <IconBell
                                 size={22}
-                                className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
+                                className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
                             />
                         </Button>
 
                         {/* User Name */}
-                        <span className='hidden xl:block text-yellow-500 font-bold text-lg truncate'>
+                        <span className='hidden xl:block text-yellowPrimary font-bold text-lg truncate'>
                             Ali Hassanzadeh
                         </span>
 
                         {/* User Profile Button */}
                         <div className='flex relative'>
                             <Button
-                                className=' bg-[#21242D] relative p-[24px] rounded-md'
+                                className=' bg-grayPrimary relative p-[24px] rounded-md'
                                 onClick={() => setOpened((o) => !o)}
                             >
                                 <IconUser
                                     size={22}
-                                    className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
+                                    className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
                                 />
                             </Button>
 
                             {/* Popup */}
                             <Popover
                                 opened={opened}
-                                dropdownClassName='bg-[#21242D] border-gray-500 -left-[82px] text-white'
+                                dropdownClassName='bg-grayPrimary border-whiteSecondary -left-[82px] '
                                 styles={{
                                     arrow: {
                                         right: '18%',
@@ -169,20 +169,20 @@ const Header: FC = () => {
                                 }}
                             >
                                 {/* Popup Dropdown */}
-                                <div className='flex flex-col  min-w-[110px] font-medium'>
+                                <div className='flex flex-col z-50 relative min-w-[110px] font-medium'>
                                     {/* Profile Icon */}
-                                    <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer px-6 hover:bg-[#1c1f27] justify-between  '>
-                                        <span className='text-gray-400'>Profile</span>
-                                        <IconAddressBook className='text-gray-400 ' size={23} />
+                                    <div className='text-sm text-whiteSecondary flex gap-x-4 rounded rounded-b-none py-4 items-center cursor-pointer px-6 hover:bg-grayPrimary justify-between  '>
+                                        <span>Profile</span>
+                                        <IconAddressBook size={23} />
                                     </div>
 
                                     {/* Line */}
-                                    <hr className='border-gray-500' />
+                                    <hr className='border-whiteSecondary' />
 
                                     {/* Logout Icon */}
-                                    <div className='text-sm flex gap-x-4 rounded py-4 items-center cursor-pointer hover:bg-[#1c1f27] px-6 justify-between '>
-                                        <span className='text-gray-400'>Log Out</span>
-                                        <IconLogout className='text-red-400 ' size={21} />
+                                    <div className='text-sm flex gap-x-4 rounded rounded-t-none py-4 items-center cursor-pointer hover:bg-grayPrimary px-6 justify-between '>
+                                        <span className='text-whiteSecondary'>Log Out</span>
+                                        <IconLogout className='text-redSecondary ' size={21} />
                                     </div>
                                 </div>
                             </Popover>
@@ -195,7 +195,7 @@ const Header: FC = () => {
             <div className='px-6 mt-6 block sm:hidden'>
                 <div className='w-full relative '>
                     <Input
-                        className='w-[270px]'
+                        className='w-[270px] text-red-500'
                         width={300}
                         placeholder='Search'
                         type='search'
@@ -204,14 +204,14 @@ const Header: FC = () => {
                             input: {
                                 background: ' #21242D',
                                 border: '0',
-                                color: 'white',
+                                color: '#d1d5db',
                                 fontSize: '15px',
                                 padding: '25px 40px 25px 40px',
                             },
                         }}
                     />
-                    <IconSearch size={20} className='text-gray-400 absolute top-1/2 -translate-y-1/2 left-2.5' />
-                    <IconFilter size={20} className='text-gray-400 absolute top-1/2 -translate-y-1/2 right-2.5' />
+                    <IconSearch size={20} className='text-grayPrimary absolute top-1/2 -translate-y-1/2 left-2.5' />
+                    <IconFilter size={20} className='text-grayPrimary absolute top-1/2 -translate-y-1/2 right-2.5' />
                 </div>
             </div>
         </>

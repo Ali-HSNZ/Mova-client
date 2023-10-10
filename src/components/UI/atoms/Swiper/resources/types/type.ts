@@ -1,3 +1,4 @@
+import { type SwiperRef } from 'swiper/react'
 
 interface ICustomSwiperOptions {
     children: JSX.Element

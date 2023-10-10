@@ -9,24 +9,26 @@ const DrawerMenu = () => {
     const pathname = usePathname()
 
     return (
-        <div className='flex items-start flex-col mt-8'>
-            <span className='text-gray-400 px-2 mb-2 font-medium text-base '>Categories</span>
-            <div className='px-2 flex items-start  flex-col'>
+        <div className='w-full  flex items-start flex-col mt-8'>
+            <span className='text-grayPrimary px-2 mb-2 font-medium text-base '>Categories</span>
+            <div className='w-full px-2 flex items-start  flex-col '>
                 {headerMenuLinksData.map((link) => (
-                    <Link key={link.id} href={link.href}>
+                    <Link
+                        key={link.id}
+                        href={link.href}
+                        className={`w-full ${
+                            pathname === link?.href
+                                ? 'text-yellowPrimary'
+                                : 'hover:text-yellowSecondary text-whiteSecondary'
+                        } `}
+                    >
                         <div
-                            className={`w-full justify-between flex items-center duration-200 ${
-                                pathname === link?.href ? 'text-yellow-400' : 'hover:text-yellow-300 text-secondary'
-                            } `}
+                            className={`flex border-r-2 ${
+                                pathname === link?.href ? 'border-yellowPrimary' : 'border-transparent'
+                            } w-full items-center p-2 gap-x-3`}
                         >
-                            <div
-                                className={`flex border-r-2 ${
-                                    pathname === link?.href ? 'border-yellow-400' : 'border-transparent'
-                                } w-full items-center p-2 gap-x-3`}
-                            >
-                                {/* Link Name */}
-                                <p className={`font-normal text-sm`}>{link.title}</p>
-                            </div>
+                            {/* Link Name */}
+                            <p className={`w-full font-normal text-sm`}>{link.title}</p>
                         </div>
                     </Link>
                 ))}
