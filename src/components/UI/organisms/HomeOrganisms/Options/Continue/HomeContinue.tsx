@@ -18,17 +18,21 @@ const HomeContinue: FC = () => {
                 <>
                     {dataSwiper.map((movie: THomeContinueMovieData) => (
                         <SwiperSlide key={movie.id}>
-                            <article className='bg-[#16181E] select-none w-[250px] flex flex-col text-white p-2   rounded '>
-                                <div className='flex gap-x-2 '>
-                                    <Image
-                                        alt={movie.title}
-                                        src={movie.imageSrc}
-                                        width={60}
-                                        height={200}
-                                        className='h-20 w-16 object-cover rounded-md '
-                                    />
+                            <article className='bg-[#16181E] select-none w-[250px] flex flex-col text-white p-3   rounded '>
+                                <div className='flex gap-x-4 '>
+                                    <div className='relative w-[64px] h-[80px]'>
+                                        <Image
+                                            priority
+                                            alt={movie.title}
+                                            src={movie.imageSrc}
+                                            fill
+                                            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+
+                                            className='h-20 w-16 object-cover rounded-md '
+                                        />
+                                    </div>
                                     <div className='flex-grow flex flex-col gap-y-2'>
-                                        <span className='font-bold text-md'>{movie.title}</span>
+                                        <span className='font-bold text-md truncate'>{movie.title}</span>
                                         <span className='text-sm font-medium text-gray-400'>
                                             {movie.episodeLeft} Episode Left
                                         </span>
@@ -37,8 +41,10 @@ const HomeContinue: FC = () => {
                                     </div>
                                 </div>
                                 <div className='flex justify-between gap-x-4 mt-5'>
-                                    <Button className='w-fit h-11 shadow-lg rounded-md bg-gray-700'>Drop</Button>
-                                    <Button className='w-full h-11 shadow-lg rounded-md bg-yellow-400 text-black'>
+                                    <Button className='w-fit h-11 shadow-lg rounded-md bg-gray-700 font-bold'>
+                                        Drop
+                                    </Button>
+                                    <Button className='w-full h-11 shadow-lg rounded-md bg-yellow-400 font-bold text-black'>
                                         Watch
                                     </Button>
                                 </div>

@@ -1,12 +1,10 @@
-type THomeTopRatedMovieData = {
+export type THomeRatedMoviesData = {
     id: number
     title: string
-    episodeLeft: number
-    progress: number
+    genre: string[]
+    episode: number
     imageSrc: string
 }
-interface IHomeTopRatedMovieDataProps {
-    dataSwiper: THomeTopRatedMovieData[]
+export interface IHomeRatedMoviesDataProps {
+    dataSwiper: THomeRatedMoviesData[]
 }
-
-export type { THomeTopRatedMovieData, IHomeTopRatedMovieDataProps }

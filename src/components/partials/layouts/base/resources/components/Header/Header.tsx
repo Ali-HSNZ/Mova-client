@@ -136,7 +136,7 @@ const Header: FC = () => {
                         </Button>
 
                         {/* User Name */}
-                        <span className='hidden xl:block text-yellow-400 font-medium text-lg truncate'>
+                        <span className='hidden xl:block text-yellow-500 font-bold text-lg truncate'>
                             Ali Hassanzadeh
                         </span>
 

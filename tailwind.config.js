@@ -4,6 +4,12 @@ module.exports = {
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         extend: {
+            brightness: {
+                10: '.10',
+                20: '.20',
+                30: '.30',
+                40: '.40',
+            },
             colors: {
                 yellowPrimary: '#FACC15',
                 yellowSecondary: '#FDE047',

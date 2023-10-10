@@ -1,48 +1,47 @@
 'use client'
 
 import { type FC } from 'react'
-import Image from 'next/image'
-import { Progress } from '@mantine/core'
 import { SwiperSlide } from 'swiper/react'
+import { IconPlus } from '@tabler/icons-react'
 
 import MiniSwiper from '@molecules/Swipers/MiniSwiper/MiniSwiper'
 
 import { Button } from '@atoms/Button'
 
-import { dataSwiper, type THomeTopRatedMovieData } from './resources'
+import { dataSwiper, type THomeRatedMoviesData } from './resources'
 
 const HomeTopRated: FC = () => {
     return (
         <section className=' overflow-hidden'>
             <MiniSwiper seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Top Rated'>
                 <>
-                    {dataSwiper.map((movie: THomeTopRatedMovieData) => (
+                    {dataSwiper.map((movie: THomeRatedMoviesData) => (
                         <SwiperSlide key={movie.id}>
-                            <article className='bg-[#16181E] select-none w-[250px] flex flex-col text-white p-2   rounded '>
-                                <div className='flex gap-x-2 '>
-                                    <Image
-                                        alt={movie.title}
-                                        src={movie.imageSrc}
-                                        width={60}
-                                        height={200}
-                                        className='h-20 w-16 object-cover rounded-md '
-                                    />
-                                    <div className='flex-grow flex flex-col gap-y-2'>
-                                        <span className='font-bold text-md'>{movie.title}</span>
-                                        <span className='text-sm font-medium text-gray-400'>
-                                            {movie.episodeLeft} Episode Left
-                                        </span>
-
-                                        <Progress color='#F8B319' size='sm' value={movie.progress} />
+                            <div className='w-[250px] h-36 relative'>
+                                <div
+                                    className='filter brightness-40 h-full w-full bg-center	 flex flex-col  text-white bg-cover  rounded'
+                                    style={{ backgroundImage: `url('${movie.imageSrc}')` }}
+                                ></div>
+                                <div className='absolute inset-0  w-full p-3 flex flex-col justify-between'>
+                                    <div className='flex-grow  flex flex-col gap-y-2'>
+                                        <span className='font-bold text-md text-white truncate'>{movie.title}</span>
+                                    </div>
+                                    <div className='flex flex-col gap-y-2'>
+                                        <div className='flex font-semibold justify-between text-sm'>
+                                            <span>{movie.episode} EP</span>
+                                            <span>{movie.genre.join(', ')}</span>
+                                        </div>
+                                        <div className='flex justify-between gap-x-4 '>
+                                            <Button className='w-fit h-11 shadow-lg rounded-md bg-gray-700 bg-opacity-50'>
+                                                <IconPlus size={20}/>
+                                            </Button>
+                                            <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellow-400 text-black'>
+                                                Watch
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className='flex justify-between gap-x-4 mt-5'>
-                                    <Button className='w-fit h-11 shadow-lg rounded-md bg-gray-700'>Drop</Button>
-                                    <Button className='w-full h-11 shadow-lg rounded-md bg-yellow-400 text-black'>
-                                        Watch
-                                    </Button>
-                                </div>
-                            </article>
+                            </div>
                         </SwiperSlide>
                     ))}
                 </>
