@@ -3,6 +3,7 @@ import { BaseLayout } from 'src/components/partials/layouts/base'
 
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
 import { HomeContinue } from '@organisms/HomeOrganisms/Options/Continue'
+import { HomeGenres } from '@organisms/HomeOrganisms/Options/Genres'
 import { HomeTopRated } from '@organisms/HomeOrganisms/Options/TopRated'
 
 const HomeTemplate: FC = () => {
@@ -21,6 +22,9 @@ const HomeTemplate: FC = () => {
 
                     {/* Top Rated */}
                     <HomeTopRated />
+
+                    {/* Genres */}
+                    <HomeGenres />
                 </div>
             </section>
         </BaseLayout>

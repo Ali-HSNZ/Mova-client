@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Progress } from '@mantine/core'
 import { SwiperSlide } from 'swiper/react'
 
-import MiniSwiper from '@molecules/Swipers/MiniSwiper/MiniSwiper'
+import { MiniSwiper } from '@molecules/Swipers/MiniSwiper'
 
 import { Button } from '@atoms/Button'
 
@@ -43,12 +43,12 @@ const HomeContinue: FC = () => {
                                         </span>
 
                                         {/* Progress bar */}
-                                        <Progress color='#F8B319' size='sm' value={movie.progress} />
+                                        <Progress className='mt-1' color='#F8B319' size='sm' value={movie.progress} />
                                     </div>
                                 </div>
 
                                 {/* Action Buttons*/}
-                                <div className='flex justify-between gap-x-4 mt-5'>
+                                <div className='flex justify-between gap-x-4 mt-3'>
                                     {/* Drop Button */}
                                     <Button className='w-fit h-11 shadow-lg rounded-md bg-gray-700 font-bold'>
                                         Drop

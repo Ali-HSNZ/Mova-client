@@ -1,7 +1,7 @@
 import { type THomeRatedMoviesData } from '..'
 import interstellar from '@images/slider/interstellar.jpg'
 import loki from '@images/slider/loki-thumbnail.jpg'
-import OnePiece from '@images/slider/OnePiece.jpg'
+import onePiece from '@images/slider/OnePiece.jpg'
 import spidermanNowayHome from '@images/slider/spidermanNowayHome.jpg'
 import wandaVisionSmall from '@images/slider/wandaVisionSmall.jpg'
 
@@ -25,7 +25,7 @@ const swiperData: THomeRatedMoviesData[] = [
         title: 'One Piece',
         genre: ['Comedy', 'War'],
         episode: 55,
-        imageSrc: OnePiece.src,
+        imageSrc: onePiece.src,
     },
     {
         id: 3,

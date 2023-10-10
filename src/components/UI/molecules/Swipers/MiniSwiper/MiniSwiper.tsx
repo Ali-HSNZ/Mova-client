@@ -41,12 +41,12 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
     const activeButtonClass = 'px-0 text-yellow-400 transition-all duration-300 bg-transparent'
 
     // prev button ----> className
-    const inactiveButtonClass = 'px-0 text-gray-400 transition-all duration-300 bg-transparent'
+    const inactiveButtonClass = 'cursor-default px-0 text-gray-400 transition-all duration-300 bg-transparent'
 
-    // Prev Button State ----> boolean ---> Active | Inactive (className)
+    // Prev Button State  ---> Active | Inactive (className)
     const prevButtonClass = activeIndex === 0 ? inactiveButtonClass : activeButtonClass
 
-    // Next Button State ----> boolean ---> Active | Inactive (className)
+    // Next Button State  ---> Active | Inactive (className)
     const nextButtonClass =
         activeIndex === swiperRef.current?.swiper.slides.length - 1 ? inactiveButtonClass : activeButtonClass
 
@@ -71,8 +71,12 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
                     </div>
                 </div>
                 {/* Section Link ----> (See More | More Detail | ...) */}
-                <Link href={seeMoreLinkHref} className=' text-sm text-gray-400'>
+                <Link href={seeMoreLinkHref} className='flex items-center text-sm text-gray-300'>
+                    {/* Link Title */}
                     {seeMoreLinkTitle}
+
+                    {/* Chevron Right */}
+                    <IconChevronRight size={18} className='mt-[1px]' />
                 </Link>
             </div>
 

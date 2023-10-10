@@ -4,7 +4,7 @@ import { type FC } from 'react'
 import { SwiperSlide } from 'swiper/react'
 import { IconPlus } from '@tabler/icons-react'
 
-import MiniSwiper from '@molecules/Swipers/MiniSwiper/MiniSwiper'
+import { MiniSwiper } from '@molecules/Swipers/MiniSwiper'
 
 import { Button } from '@atoms/Button'
 
