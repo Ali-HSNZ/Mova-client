@@ -11,7 +11,10 @@ import 'swiper/css/navigation'
 const MainSwiper = ({ children }: { children: JSX.Element }) => {
     return (
         <Swiper
-            pagination={{ clickable: true, dynamicBullets: true }} // Enable clickable pagination
+            pagination={{
+                clickable: true, // Enable clickable pagination
+                dynamicBullets: true,
+            }}
             modules={[Pagination, Navigation]}
             spaceBetween={10}
             className='_mainSwiper relative h-[320px] rounded-lg'
