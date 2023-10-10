@@ -1,11 +1,6 @@
-import { type PaginationOptions, type SwiperModule } from 'swiper/types'
 
-interface ICustomSwiperProps {
+interface ICustomSwiperOptions {
     children: JSX.Element
-    modules?: SwiperModule[]
-    spaceBetween?: number
     className?: string
-    pagination: PaginationOptions
-    isLoop?: boolean
 }
-export default ICustomSwiperProps
+export default ICustomSwiperOptions

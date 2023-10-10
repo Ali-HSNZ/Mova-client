@@ -8,7 +8,7 @@
     },
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 25, //? Tab width
-    "editor.mouseWheelZoom": true, //? Enable Zoom with mouse scroll - Default is False
+    "editor.mouseWheelZoom": false, //? Enable Zoom with mouse scroll - Default is False
 
     // eslint extension options
     "eslint.enable": true,

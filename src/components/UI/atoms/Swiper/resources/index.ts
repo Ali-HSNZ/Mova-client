@@ -1,3 +1,3 @@
-import type ICustomSwiperProps from './types/type'
+import type ICustomSwiperOptions from './types/type'
 
-export type { ICustomSwiperProps }
+export type { ICustomSwiperOptions }

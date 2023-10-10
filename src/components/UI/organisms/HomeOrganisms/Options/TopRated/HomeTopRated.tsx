@@ -9,14 +9,14 @@ import MiniSwiper from '@molecules/Swipers/MiniSwiper/MiniSwiper'
 
 import { Button } from '@atoms/Button'
 
-import { dataSwiper, type THomeContinueMovieData } from './resources'
+import { dataSwiper, type THomeTopRatedMovieData } from './resources'
 
-const HomeContinue: FC = () => {
+const HomeTopRated: FC = () => {
     return (
         <section className=' overflow-hidden'>
-            <MiniSwiper seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Continue'>
+            <MiniSwiper seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Top Rated'>
                 <>
-                    {dataSwiper.map((movie: THomeContinueMovieData) => (
+                    {dataSwiper.map((movie: THomeTopRatedMovieData) => (
                         <SwiperSlide key={movie.id}>
                             <article className='bg-[#16181E] select-none w-[250px] flex flex-col text-white p-2   rounded '>
                                 <div className='flex gap-x-2 '>
@@ -51,4 +51,4 @@ const HomeContinue: FC = () => {
     )
 }
 
-export default HomeContinue
+export default HomeTopRated

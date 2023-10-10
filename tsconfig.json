@@ -41,6 +41,9 @@
             "@coreTypes/*": ["./src/core/types/*"],
             "@utils/*": ["./src/core/utils/*"],
 
+            // Images
+            "@images/*": ["./public/images/*"],
+
             // Styles
             "@styles/*": ["./src/styles/*"]
         }
