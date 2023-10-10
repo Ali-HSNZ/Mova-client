@@ -9,11 +9,17 @@ const HomeTemplate: FC = () => {
     return (
         <BaseLayout>
             <section className='grid gap-y-6 md:gap-y-0 grid-cols-10 gap-x-10'>
+                {/* Main ----- (Center)  */}
                 <div className='col-span-10 px-6 lg:px-0 lg:col-span-6 xl:col-span-7 md:pl-6'>
                     <HomeMainSlider />
                 </div>
+
+                {/* User Options ------- (Side) */}
                 <div className='col-span-10 mt-6 px-6 lg:px-0 lg:mt-0 lg:col-span-4 xl:col-span-3 flex flex-col gap-y-6'>
+                    {/* Continue */}
                     <HomeContinue />
+
+                    {/* Top Rated */}
                     <HomeTopRated />
                 </div>
             </section>
