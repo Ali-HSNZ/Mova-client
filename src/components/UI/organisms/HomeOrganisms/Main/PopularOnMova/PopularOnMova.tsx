@@ -1,13 +1,13 @@
 'use client'
 
 import { type FC } from 'react'
-import { Rating } from '@mantine/core'
 import { SwiperSlide } from 'swiper/react'
 import { IconPlus } from '@tabler/icons-react'
 
 import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { Button } from '@atoms/Button'
+import { Rating } from '@atoms/Rating'
 
 import { swiperData, type THomePopularOnMovaDetail } from './resources'
 

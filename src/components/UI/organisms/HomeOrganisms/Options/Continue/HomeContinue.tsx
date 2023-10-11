@@ -2,12 +2,12 @@
 
 import { type FC } from 'react'
 import Image from 'next/image'
-import { Progress } from '@mantine/core'
 import { SwiperSlide } from 'swiper/react'
 
 import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { Button } from '@atoms/Button'
+import { Progress } from '@atoms/Progress'
 
 import { dataSwiper, type THomeContinueMovieData } from './resources'
 

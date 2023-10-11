@@ -112,3 +112,14 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
                 slidesPerView={'auto'}
                 freeMode
                 onSlideChange={handleSlideChange}
+                spaceBetween={30}
+                ref={swiperRef}
+                className='_multiSwiper mt-4 rounded-lg relative select-none'
+            >
+                {children}
+            </Swiper>
+        </div>
+    )
+}
+
+export default MultiSwiper
