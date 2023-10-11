@@ -1,6 +1,7 @@
 'use client'
 
 import { type FC } from 'react'
+import { Rating } from '@mantine/core'
 import { SwiperSlide } from 'swiper/react'
 import { IconPlus } from '@tabler/icons-react'
 
@@ -8,30 +9,25 @@ import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { Button } from '@atoms/Button'
 
-import { dataSwiper, type THomeRatedMoviesData } from './resources'
+import { swiperData, type THomePopularOnMovaDetail } from './resources'
 
-const HomeTopRated: FC = () => {
+const HomePopularOnMova: FC = () => {
     return (
-        <MultiSwiper
-            seeMoreClassName='pr-6'
-            isMoreOption
-            seeMoreLinkHref='#'
-            seeMoreLinkTitle='See More'
-            title='Top Rated'
-        >
+        <MultiSwiper title='Popular On Mova'>
             <>
-                {dataSwiper.map((movie: THomeRatedMoviesData) => (
+                {/* Render All Genres */}
+                {swiperData.map((movie: THomePopularOnMovaDetail) => (
                     <SwiperSlide key={movie.id}>
-                        <div className='w-[250px] h-36 relative'>
-                            {/* Movie Image */}
+                        <article className='w-[200px] relative overflow-hidden'>
                             <div
-                                className='filter brightness-secondary h-full w-full bg-center	 flex flex-col  text-whitePrimary bg-cover  rounded'
+                                className='filter brightness-secondary h-[250px] w-full bg-center	   text-white bg-cover  rounded'
                                 style={{ backgroundImage: `url('${movie.imageSrc}')` }}
                             ></div>
-
-                            <div className='absolute inset-0  w-full p-3 flex flex-col justify-between'>
-                                {/* Movie Title */}
-                                <span className='font-bold text-md text-whiteSecondary truncate'>{movie.title}</span>
+                            <div className='w-full absolute inset-0 flex flex-col justify-between p-3 rounded-xl   '>
+                                <div className='flex flex-col gap-y-1'>
+                                    <div className='truncate text-xl font-bold drop-shadow-2xl'>{movie.title}</div>
+                                    <Rating fractions={movie.rate} defaultValue={movie.rate} readOnly size='xs' />
+                                </div>
 
                                 {/* Action Button And Movie Detail */}
                                 <div className='flex flex-col gap-y-2'>
@@ -55,7 +51,7 @@ const HomeTopRated: FC = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </SwiperSlide>
                 ))}
             </>
@@ -63,4 +59,4 @@ const HomeTopRated: FC = () => {
     )
 }
 
-export default HomeTopRated
+export default HomePopularOnMova

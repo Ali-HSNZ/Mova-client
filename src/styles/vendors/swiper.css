@@ -14,9 +14,9 @@
     @apply w-2.5 h-2.5 bg-whitePrimary opacity-full
 }
 
-/*!-------------------------- Mini Swiper--------------------------*/
+/*!-------------------------- Multi Swiper--------------------------*/
 
 /* For FreeMode Slide */
-._miniSwiper .swiper-slide {
-    @apply w-auto
+._multiSwiper .swiper-slide {
+    @apply !w-auto
 }

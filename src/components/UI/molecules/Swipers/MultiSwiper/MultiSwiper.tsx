@@ -12,31 +12,45 @@ import { Swiper } from '@atoms/Swiper'
 import 'swiper/css/navigation'
 import 'swiper/css/free-mode'
 
-import { type IMiniSwiperProps } from './resource'
+import { type IMultiSwiperProps } from './resource'
 
-const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHref = '', seeMoreLinkTitle = '' }) => {
+const MultiSwiper: FC<IMultiSwiperProps> = ({
+    isMoreOption = undefined,
+    children,
+    title = '',
+    seeMoreClassName = '',
+    seeMoreLinkHref = '',
+    seeMoreLinkTitle = '',
+}) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const swiperRef: any = useRef(null)
+    const swiper = swiperRef.current?.swiper
 
-    // Saved Swiper Slide Index ---> State
-    const [activeIndex, setActiveIndex] = useState(0)
+    // Saved Swiper Status ---> State
+    const [swiperStatus, setSwiperStatus] = useState({
+        isBeginning: true,
+        isEnd: false,
+    })
 
-    // Update Slide Index ---> Handler ---> SetState
+    // Update Slide Status ---> Handler ---> SetState
     const handleSlideChange = useCallback((swiper: SwiperClass) => {
-        setActiveIndex(swiper.activeIndex)
+        setSwiperStatus({
+            isBeginning: swiper.isBeginning,
+            isEnd: swiper.isEnd,
+        })
     }, [])
 
     // change swiper slide ---> prev
     const handlePrev = useCallback(() => {
         if (!swiperRef.current) return
-        swiperRef.current.swiper.slidePrev()
-    }, [])
+        swiper.slidePrev()
+    }, [swiper])
 
     // change swiper slide ---> next
     const handleNext = useCallback(() => {
         if (!swiperRef.current) return
-        swiperRef.current.swiper.slideNext()
-    }, [])
+        swiper.slideNext()
+    }, [swiper])
 
     // Active button className
     const activeButtonClass = 'text-yellowPrimary'
@@ -45,22 +59,23 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
     const disableButtonClass = 'cursor-default text-graySecondary'
 
     // Prev Button State  ---> Active | Disable (className)
-    const prevButtonClass = activeIndex === 0 ? disableButtonClass : activeButtonClass
+    const prevButtonClass = swiperStatus.isBeginning ? disableButtonClass : activeButtonClass
 
     // Next Button State  ---> Active | Disable (className)
-    const nextButtonClass =
-        activeIndex === swiperRef.current?.swiper.slides.length - 1 ? disableButtonClass : activeButtonClass
+    const nextButtonClass = swiperStatus.isEnd ? disableButtonClass : activeButtonClass
 
     return (
         <div className='relative'>
-            <div className='flex justify-between items-center pr-6'>
+            <div className={`flex justify-between items-center ${seeMoreClassName}`}>
                 {/* Section Title And Action Buttons */}
-                <div className='flex items-center gap-x-2'>
+                <div className='w-full flex items-center gap-x-2  '>
                     {/* Section Title */}
-                    <h1 className='font-bold text-xl text-whitePrimary'>{title}</h1>
+                    <h1 className={`font-bold ${isMoreOption ? 'w-fit' : 'w-full'} text-xl text-whitePrimary`}>
+                        {title}
+                    </h1>
 
                     {/* Prev Button And Next Button */}
-                    <div>
+                    <div className='flex'>
                         {/* Prev Button */}
                         <Button
                             className={`${prevButtonClass} px-0 transition-all duration-300 bg-transparent`}
@@ -78,13 +93,18 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
                     </div>
                 </div>
                 {/* Section Link ----> (See More | More Detail | ...) */}
-                <Link href={seeMoreLinkHref} className='flex items-center text-sm text-graySecondary'>
-                    {/* Link Title */}
-                    {seeMoreLinkTitle}
+                {isMoreOption && (
+                    <Link
+                        href={seeMoreLinkHref}
+                        className='whitespace-nowrap flex items-center text-sm text-graySecondary'
+                    >
+                        {/* Link Title */}
+                        {seeMoreLinkTitle}
 
-                    {/* Chevron Right */}
-                    <IconChevronRight size={18} className='mt-[1px]' />
-                </Link>
+                        {/* Chevron Right */}
+                        <IconChevronRight size={18} className='mt-[1px]' />
+                    </Link>
+                )}
             </div>
 
             <Swiper
@@ -92,14 +112,3 @@ const MiniSwiper: FC<IMiniSwiperProps> = ({ children, title = '', seeMoreLinkHre
                 slidesPerView={'auto'}
                 freeMode
                 onSlideChange={handleSlideChange}
-                spaceBetween={30}
-                ref={swiperRef}
-                className='_miniSwiper mt-4 rounded-lg relative select-none'
-            >
-                {children}
-            </Swiper>
-        </div>
-    )
-}
-
-export default MiniSwiper

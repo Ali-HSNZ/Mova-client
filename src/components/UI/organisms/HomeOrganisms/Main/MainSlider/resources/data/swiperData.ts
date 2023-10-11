@@ -1,41 +1,41 @@
 import { type TMainSwiperData } from '..'
 
-import AnimationSpiderman from '@public/images/slider/animationSpiderMan.jpg'
-import Annabel from '@public/images/slider/Annable.jpg'
-import Avatar from '@public/images/slider/avatar-2009.webp'
-import DayShift from '@public/images/slider/DayShift.jpg'
-import EnolaHolmes2 from '@public/images/slider/EnolaHolmes2.jpg'
+import animationSpiderman from '@public/images/slider/animationSpiderMan.jpg'
+import annabel from '@public/images/slider/Annable.jpg'
+import avatar from '@public/images/slider/avatar-2009.webp'
+import dayShift from '@public/images/slider/DayShift.jpg'
+import enolaHolmes2 from '@public/images/slider/EnolaHolmes2.jpg'
 
 const dataSwiper: TMainSwiperData[] = [
     {
         id: 0,
-        name: 'Animation Spiderman',
-        imageSrc: AnimationSpiderman.src,
+        name: 'Annabel',
+        imageSrc: annabel.src,
     },
     {
         id: 1,
-        name: 'Avatar',
-        imageSrc: Avatar.src,
+        name: 'Animation Spiderman',
+        imageSrc: animationSpiderman.src,
     },
     {
         id: 2,
-        name: 'DayShift',
-        imageSrc: DayShift.src,
+        name: 'Avatar',
+        imageSrc: avatar.src,
     },
     {
         id: 3,
-        name: 'Enola Holmes 2',
-        imageSrc: EnolaHolmes2.src,
+        name: 'DayShift',
+        imageSrc: dayShift.src,
     },
     {
         id: 4,
-        name: 'Avatar',
-        imageSrc: Avatar.src,
+        name: 'Enola Holmes 2',
+        imageSrc: enolaHolmes2.src,
     },
     {
         id: 5,
-        name: 'Annabel',
-        imageSrc: Annabel.src,
+        name: 'Avatar',
+        imageSrc: avatar.src,
     },
 ]
 
