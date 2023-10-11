@@ -6,7 +6,7 @@
 
 /* Bullet Active */
 ._mainSwiper .swiper-pagination-bullet-active {
-    background-color: #FACC15 !important;
+    @apply !bg-yellowPrimary
 }
 
 /* Each Bullet */
