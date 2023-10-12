@@ -12,13 +12,7 @@ import { dataSwiper, type THomeRatedMoviesData } from './resources'
 
 const HomeTopRated: FC = () => {
     return (
-        <MultiSwiper
-            seeMoreClassName='pr-6'
-            isMoreOption
-            seeMoreLinkHref='#'
-            seeMoreLinkTitle='See More'
-            title='Top Rated'
-        >
+        <MultiSwiper isMoreOption seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Top Rated'>
             <>
                 {dataSwiper.map((movie: THomeRatedMoviesData) => (
                     <SwiperSlide key={movie.id}>

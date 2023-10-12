@@ -13,7 +13,7 @@ import { swiperData, type THomePopularOnMovaDetail } from './resources'
 
 const HomePopularOnMova: FC = () => {
     return (
-        <MultiSwiper title='Popular On Mova'>
+        <MultiSwiper spaceBetween={10} title='Popular On Mova'>
             <>
                 {/* Render All Genres */}
                 {swiperData.map((movie: THomePopularOnMovaDetail) => (

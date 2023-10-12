@@ -18,9 +18,9 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
     isMoreOption = undefined,
     children,
     title = '',
-    seeMoreClassName = '',
     seeMoreLinkHref = '',
     seeMoreLinkTitle = '',
+    spaceBetween = 30,
 }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const swiperRef: any = useRef(null)
@@ -66,7 +66,7 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
 
     return (
         <div className='relative'>
-            <div className={`flex justify-between items-center ${seeMoreClassName}`}>
+            <div className={`flex justify-between items-center`}>
                 {/* Section Title And Action Buttons */}
                 <div className='w-full flex items-center gap-x-2  '>
                     {/* Section Title */}
@@ -96,7 +96,7 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
                 {isMoreOption && (
                     <Link
                         href={seeMoreLinkHref}
-                        className='whitespace-nowrap flex items-center text-sm text-graySecondary'
+                        className='whitespace-nowrap lg:pr-6 flex items-center text-sm text-graySecondary'
                     >
                         {/* Link Title */}
                         {seeMoreLinkTitle}
@@ -112,7 +112,7 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
                 slidesPerView={'auto'}
                 freeMode
                 onSlideChange={handleSlideChange}
-                spaceBetween={30}
+                spaceBetween={spaceBetween}
                 ref={swiperRef}
                 className='_multiSwiper mt-4 rounded-lg relative select-none'
             >

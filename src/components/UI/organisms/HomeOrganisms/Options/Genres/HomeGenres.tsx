@@ -10,13 +10,7 @@ import { swiperData, type THomeGenreDetail, type THomeGenreMoviesData } from './
 
 const HomeGenres: FC = () => {
     return (
-        <MultiSwiper
-            seeMoreClassName='pr-6'
-            isMoreOption
-            seeMoreLinkHref='#'
-            seeMoreLinkTitle='See More'
-            title='Genres'
-        >
+        <MultiSwiper isMoreOption seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Genres'>
             <>
                 {/* Render All Genres */}
                 {swiperData.map((category: THomeGenreMoviesData) => (

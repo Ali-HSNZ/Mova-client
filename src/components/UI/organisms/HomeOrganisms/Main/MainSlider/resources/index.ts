@@ -1,4 +1,4 @@
-import dataSwiper from './data/swiperData'
-import { type IMainSwiperProps, type TMainSwiperData } from './types/type'
+import dataKeenSlider from './data/dataKeenSlider'
+import { type IMainKeenSliderProps, type TMainKeenSliderData } from './types/type'
 
-export { dataSwiper, type IMainSwiperProps, type TMainSwiperData }
+export { dataKeenSlider, type IMainKeenSliderProps, type TMainKeenSliderData }

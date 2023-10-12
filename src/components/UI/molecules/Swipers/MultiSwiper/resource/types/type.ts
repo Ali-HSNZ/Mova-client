@@ -4,6 +4,6 @@ interface IMultiSwiperProps {
     seeMoreLinkHref?: string
     seeMoreLinkTitle?: string
     isMoreOption?: boolean
-    seeMoreClassName?: string
+    spaceBetween?: number
 }
 export default IMultiSwiperProps

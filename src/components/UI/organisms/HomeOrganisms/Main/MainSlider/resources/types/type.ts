@@ -1,10 +1,10 @@
-type TMainSwiperData = {
+type TMainKeenSliderData = {
     id: number
-    name: string
+    title: string
     imageSrc: string
 }
-interface IMainSwiperProps {
-    dataSwiper: TMainSwiperData[]
+interface IMainKeenSliderProps {
+    dataKeenSlider: TMainKeenSliderData[]
 }
 
-export type { IMainSwiperProps, TMainSwiperData }
+export type { IMainKeenSliderProps, TMainKeenSliderData }
