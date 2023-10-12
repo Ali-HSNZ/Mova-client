@@ -21,6 +21,7 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
     seeMoreLinkHref = '',
     seeMoreLinkTitle = '',
     spaceBetween = 30,
+    swiperOption,
 }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const swiperRef: any = useRef(null)
@@ -111,6 +112,7 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
                 modules={[FreeMode]}
                 slidesPerView={'auto'}
                 freeMode
+                {...swiperOption}
                 onSlideChange={handleSlideChange}
                 spaceBetween={spaceBetween}
                 ref={swiperRef}

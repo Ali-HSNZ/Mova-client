@@ -9,14 +9,19 @@ import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 import { Button } from '@atoms/Button'
 import { Rating } from '@atoms/Rating'
 
-import { swiperData, type THomePopularOnMovaDetail } from './resources'
+import { swiperData, type THomePopularMoviesOnMovaDetail } from './resources'
 
-const HomePopularOnMova: FC = () => {
+const HomePopularMoviesOnMova: FC = () => {
     return (
-        <MultiSwiper spaceBetween={10} title='Popular On Mova'>
+        <MultiSwiper
+            swiperOption={{
+                spaceBetween: 40,
+            }}
+            title='Popular Movies On Mova'
+        >
             <>
                 {/* Render All Genres */}
-                {swiperData.map((movie: THomePopularOnMovaDetail) => (
+                {swiperData.map((movie: THomePopularMoviesOnMovaDetail) => (
                     <SwiperSlide key={movie.id}>
                         <article className='w-[200px] relative overflow-hidden'>
                             <div
@@ -59,4 +64,4 @@ const HomePopularOnMova: FC = () => {
     )
 }
 
-export default HomePopularOnMova
+export default HomePopularMoviesOnMova

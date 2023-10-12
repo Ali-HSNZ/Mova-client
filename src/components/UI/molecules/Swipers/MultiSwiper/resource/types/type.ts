@@ -1,3 +1,5 @@
+import { type SwiperOptions } from 'swiper/types'
+
 interface IMultiSwiperProps {
     children: JSX.Element
     title: string
@@ -5,5 +7,6 @@ interface IMultiSwiperProps {
     seeMoreLinkTitle?: string
     isMoreOption?: boolean
     spaceBetween?: number
+    swiperOption?: SwiperOptions
 }
 export default IMultiSwiperProps

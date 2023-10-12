@@ -1,4 +1,4 @@
-type THomePopularOnMovaDetail = {
+type THomePopularSeriesOnMovaDetail = {
     id: number
     title: string
     rate: number
@@ -6,4 +6,4 @@ type THomePopularOnMovaDetail = {
     genre: string[]
     episode: number
 }
-export default THomePopularOnMovaDetail
+export default THomePopularSeriesOnMovaDetail

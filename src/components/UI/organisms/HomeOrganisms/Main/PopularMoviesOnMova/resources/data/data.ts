@@ -1,4 +1,4 @@
-import { type THomePopularOnMovaDetail } from '..'
+import { type THomePopularMoviesOnMovaDetail } from '..'
 
 import animationSpiderman from '@public/images/slider/animationSpiderMan.jpg'
 import annabel from '@public/images/slider/Annable.jpg'
@@ -6,7 +6,7 @@ import avatar from '@public/images/slider/avatar-2009.webp'
 import dayShift from '@public/images/slider/DayShift.jpg'
 import enolaHolmes2 from '@public/images/slider/EnolaHolmes2.jpg'
 
-const swiperData: THomePopularOnMovaDetail[] = [
+const swiperData: THomePopularMoviesOnMovaDetail[] = [
     {
         title: 'AnimationSpiderman',
         rate: 2.5,

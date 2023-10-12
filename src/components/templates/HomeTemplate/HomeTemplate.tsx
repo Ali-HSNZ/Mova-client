@@ -2,10 +2,11 @@ import { type FC } from 'react'
 import { BaseLayout } from 'src/components/partials/layouts/base'
 
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
-import { HomePopularOnMova } from '@organisms/HomeOrganisms/Main/PopularOnMova'
-import { HomeContinue } from '@organisms/HomeOrganisms/Options/Continue'
-import { HomeGenres } from '@organisms/HomeOrganisms/Options/Genres'
-import { HomeTopRated } from '@organisms/HomeOrganisms/Options/TopRated'
+import { HomePopularMoviesOnMova } from '@organisms/HomeOrganisms/Main/PopularMoviesOnMova'
+import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
+import { HomeContinue } from '@organisms/HomeOrganisms/Side/Continue'
+import { HomeGenres } from '@organisms/HomeOrganisms/Side/Genres'
+import { HomeTopRated } from '@organisms/HomeOrganisms/Side/TopRated'
 
 const HomeTemplate: FC = () => {
     return (
@@ -17,7 +18,10 @@ const HomeTemplate: FC = () => {
                     <HomeMainSlider />
 
                     {/* Popular On Mova */}
-                    <HomePopularOnMova />
+                    <HomePopularMoviesOnMova />
+
+                    {/* Popular On Mova */}
+                    <HomePopularSeriesOnMova />
                 </div>
 
                 {/* User Options ------- (Side) */}
