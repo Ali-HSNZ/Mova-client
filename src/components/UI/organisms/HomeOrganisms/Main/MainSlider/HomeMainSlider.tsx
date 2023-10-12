@@ -26,7 +26,7 @@ const HomeMainSlider: FC = () => {
                                 className='w-full min-h-full object-cover'
                             />
                             {/* movie Title */}
-                            <span className='absolute select-none top-8 left-8 text-xl md:text-3xl font-bold  text-whitePrimary'>
+                            <span className='absolute select-none top-3 left-4 text-xl md:text-3xl font-bold  text-whitePrimary'>
                                 {movie.title}
                             </span>
                             title
