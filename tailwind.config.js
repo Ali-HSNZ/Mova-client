@@ -31,7 +31,7 @@ module.exports = {
                 redPrimary: '#dc2626',
 
                 // Scroll Color
-                scrollColor: '#FACC15', // fill
+                scrollColor: '#f8b319', // fill
                 scrollHover: '#6b7280', // on hover
             },
             fontFamily: {

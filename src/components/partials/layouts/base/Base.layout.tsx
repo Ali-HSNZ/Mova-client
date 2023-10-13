@@ -14,7 +14,7 @@ const BaseLayout: FC<ILayoutProps> = ({ children }) => {
                     <div className='hidden lg:block  md:px-4'>
                         <Sidebar />
                     </div>
-                    <main className='flex-grow w-full overflow-hidden mt-6'>{children}</main>
+                    <main className='mt-6'>{children}</main>
                 </div>
             </div>
         </section>
