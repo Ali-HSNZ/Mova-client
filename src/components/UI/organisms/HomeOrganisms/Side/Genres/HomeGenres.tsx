@@ -31,10 +31,14 @@ const HomeGenres: FC = () => {
                         className='keen-slider__slide flex flex-col gap-y-4'
                     >
                         {category.genres.map((genreDetail: THomeGenreDetail) => (
-                            <Link key={genreDetail.id} href={genreDetail.href} className='flex w-full relative'>
+                            <Link
+                                key={genreDetail.id}
+                                href={genreDetail.href}
+                                className='flex w-full relative rounded-2xl overflow-hidden'
+                            >
                                 {/* Genre Image */}
                                 <div
-                                    className='filter brightness-secondary h-[90px] w-full  text-whitePrimary bg-cover  rounded'
+                                    className='filter brightness-secondary h-[110px] w-full  text-whitePrimary bg-cover'
                                     style={{ backgroundImage: `url('${genreDetail.imageSrc}')` }}
                                 ></div>
 

@@ -66,7 +66,7 @@ const HomeContinue: FC = () => {
                             </Button>
 
                             {/* Watch Button */}
-                            <Button className='w-full h-9 shadow-lg rounded-md bg-yellowPrimary font-semibold text-black'>
+                            <Button className='w-full h-9 shadow-lg rounded-md bg-yellowPrimary font-bold text-black'>
                                 Watch
                             </Button>
                         </div>
