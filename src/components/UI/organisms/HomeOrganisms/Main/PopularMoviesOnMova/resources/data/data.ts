@@ -6,7 +6,7 @@ import avatar from '@public/images/slider/avatar-2009.webp'
 import dayShift from '@public/images/slider/DayShift.jpg'
 import enolaHolmes2 from '@public/images/slider/EnolaHolmes2.jpg'
 
-const swiperData: THomePopularMoviesOnMovaDetail[] = [
+const sliderData: THomePopularMoviesOnMovaDetail[] = [
     {
         title: 'AnimationSpiderman',
         rate: 2.5,
@@ -88,4 +88,4 @@ const swiperData: THomePopularMoviesOnMovaDetail[] = [
         id: 10,
     },
 ]
-export default swiperData
+export default sliderData

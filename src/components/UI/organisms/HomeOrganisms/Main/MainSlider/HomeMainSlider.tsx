@@ -4,7 +4,7 @@ import { type FC } from 'react'
 import Image from 'next/image'
 import { IconPlayerPlay, IconPlus } from '@tabler/icons-react'
 
-import { MainKeenSlider } from '@molecules/Swipers/MainKeenSlider'
+import { MainKeenSlider } from '@molecules/sliders/MainKeenSlider'
 
 import { Button } from '@atoms/Button'
 

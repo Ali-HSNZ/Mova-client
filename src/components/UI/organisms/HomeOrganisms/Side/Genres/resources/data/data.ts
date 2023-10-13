@@ -8,7 +8,7 @@ import onePiece from '@images/slider/OnePiece.jpg'
 import spidermanNowayHome from '@images/slider/spidermanNowayHome.jpg'
 import wandaVisionSmall from '@images/slider/wandaVisionSmall.jpg'
 
-const swiperData: THomeGenreMoviesData[] = [
+const sliderData: THomeGenreMoviesData[] = [
     {
         id: 0,
         genres: [
@@ -79,4 +79,4 @@ const swiperData: THomeGenreMoviesData[] = [
     },
 ]
 
-export default swiperData
+export default sliderData

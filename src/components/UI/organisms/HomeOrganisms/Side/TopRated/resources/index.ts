@@ -1,3 +1,3 @@
-import dataSwiper from './data/swiperData'
-import { type IHomeRatedMoviesDataProps, type THomeRatedMoviesData } from './types/type'
-export { dataSwiper, type IHomeRatedMoviesDataProps, type THomeRatedMoviesData }
+import sliderData from './data/sliderData'
+import type THomeRatedMoviesData from './types/type'
+export { sliderData, type THomeRatedMoviesData }

@@ -3,7 +3,7 @@ import { BaseLayout } from 'src/components/partials/layouts/base'
 
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
 import { HomePopularMoviesOnMova } from '@organisms/HomeOrganisms/Main/PopularMoviesOnMova'
-import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
+// import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
 import { HomeContinue } from '@organisms/HomeOrganisms/Side/Continue'
 import { HomeGenres } from '@organisms/HomeOrganisms/Side/Genres'
 import { HomeTopRated } from '@organisms/HomeOrganisms/Side/TopRated'
@@ -21,7 +21,7 @@ const HomeTemplate: FC = () => {
                     <HomePopularMoviesOnMova />
 
                     {/* Popular On Mova */}
-                    <HomePopularSeriesOnMova />
+                    {/* <HomePopularSeriesOnMova /> */}
                 </div>
 
                 {/* User Options ------- (Side) */}

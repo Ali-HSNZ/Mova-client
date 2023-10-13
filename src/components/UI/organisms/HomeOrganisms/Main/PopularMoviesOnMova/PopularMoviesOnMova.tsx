@@ -1,66 +1,68 @@
-'use client'
-
 import { type FC } from 'react'
-import { SwiperSlide } from 'swiper/react'
 import { IconPlus } from '@tabler/icons-react'
 
-import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
+import { MultiKeenSlider } from '@molecules/sliders/MultiKeenSlider'
 
 import { Button } from '@atoms/Button'
 import { Rating } from '@atoms/Rating'
 
-import { swiperData, type THomePopularMoviesOnMovaDetail } from './resources'
+import { sliderData, type THomePopularMoviesOnMovaDetail } from './resources'
 
 const HomePopularMoviesOnMova: FC = () => {
     return (
-        <MultiSwiper
-            swiperOption={{
-                spaceBetween: 40,
+        <MultiKeenSlider
+            keenSliderOptions={{
+                mode: 'free',
+                slides: { perView: 'auto', spacing: 25 },
             }}
             title='Popular Movies On Mova'
         >
             <>
                 {/* Render All Genres */}
-                {swiperData.map((movie: THomePopularMoviesOnMovaDetail) => (
-                    <SwiperSlide key={movie.id}>
-                        <article className='w-[200px] relative overflow-hidden'>
-                            <div
-                                className='filter brightness-secondary h-[250px] w-full bg-center	   text-white bg-cover  rounded'
-                                style={{ backgroundImage: `url('${movie.imageSrc}')` }}
-                            ></div>
-                            <div className='w-full absolute inset-0 flex flex-col justify-between p-3 rounded-xl   '>
-                                <div className='flex flex-col gap-y-1'>
-                                    <div className='truncate text-xl font-bold drop-shadow-2xl'>{movie.title}</div>
-                                    <Rating fractions={movie.rate} defaultValue={movie.rate} readOnly size='xs' />
+                {sliderData.map((movie: THomePopularMoviesOnMovaDetail) => (
+                    <article
+                        style={{ minWidth: 220, maxWidth: 220 }}
+                        key={movie.id}
+                        className='keen-slider__slide h-[250px] rounded-2xl relative overflow-hidden'
+                    >
+                        <div
+                            className='filter brightness-secondary h-full w-full bg-center bg-cover'
+                            style={{ backgroundImage: `url('${movie.imageSrc}')` }}
+                        ></div>
+                        <div className='w-full absolute inset-0 flex flex-col justify-between pt-2 pb-3 px-3   '>
+                            <div className='flex flex-col gap-y-1'>
+                                <p className='truncate text-xl font-bold text-whiteSecondary drop-shadow-2xl'>
+                                    {movie.title}
+                                </p>
+                                <Rating fractions={movie.rate} defaultValue={movie.rate} readOnly size='xs' />
+                            </div>
+
+                            {/* Action Button And Movie Detail */}
+                            <div className='flex flex-col gap-y-2'>
+                                {/* Movie Detail */}
+                                <div className='flex font-semibold justify-between text-graySecondary text-sm  '>
+                                    <span className=' whitespace-nowrap pr-4'>{movie.episode} EP</span>
+                                    <span className='truncate'>{movie.genre.join(', ')}</span>
                                 </div>
 
-                                {/* Action Button And Movie Detail */}
-                                <div className='flex flex-col gap-y-2'>
-                                    {/* Movie Detail */}
-                                    <div className='flex font-semibold justify-between text-graySecondary text-sm  '>
-                                        <span className=' whitespace-nowrap pr-4'>{movie.episode} EP</span>
-                                        <span className='truncate'>{movie.genre.join(', ')}</span>
-                                    </div>
+                                {/* Action Buttons */}
+                                <div className='flex justify-between gap-x-4 '>
+                                    {/* Add To WatchList Button */}
+                                    <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary'>
+                                        <IconPlus size={20} />
+                                    </Button>
 
-                                    {/* Action Buttons */}
-                                    <div className='flex justify-between gap-x-4 '>
-                                        {/* Add To WatchList Button */}
-                                        <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary'>
-                                            <IconPlus size={20} />
-                                        </Button>
-
-                                        {/* Watch Button */}
-                                        <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
-                                            Watch
-                                        </Button>
-                                    </div>
+                                    {/* Watch Button */}
+                                    <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
+                                        Watch
+                                    </Button>
                                 </div>
                             </div>
-                        </article>
-                    </SwiperSlide>
+                        </div>
+                    </article>
                 ))}
             </>
-        </MultiSwiper>
+        </MultiKeenSlider>
     )
 }
 

@@ -1,4 +1,4 @@
-import dataSwiper from './data/swiperData'
-import type { IHomeContinueMovieDataProps, THomeContinueMovieData } from './types/type'
+import sliderData from './data/sliderData'
+import type THomeContinueMovieData from './types/type'
 
-export { dataSwiper, type IHomeContinueMovieDataProps, type THomeContinueMovieData }
+export { sliderData, type THomeContinueMovieData }

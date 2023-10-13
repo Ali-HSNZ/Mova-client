@@ -5,8 +5,5 @@ type THomeContinueMovieData = {
     progress: number
     imageSrc: string
 }
-interface IHomeContinueMovieDataProps {
-    dataSwiper: THomeContinueMovieData[]
-}
 
-export type { THomeContinueMovieData, IHomeContinueMovieDataProps }
+export default THomeContinueMovieData

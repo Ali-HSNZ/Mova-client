@@ -15,7 +15,7 @@ module.exports = {
             },
             colors: {
                 // Yellow
-                yellowPrimary: '#FACC15',
+                yellowPrimary: '#f8b319',
                 yellowSecondary: '#fde68a',
 
                 // Gray
