@@ -3,6 +3,7 @@ import { BaseLayout } from 'src/components/partials/layouts/base'
 
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
 import { HomeMovieRating } from '@organisms/HomeOrganisms/Main/MovieRating'
+import { HomeNowTrending } from '@organisms/HomeOrganisms/Main/NowTrending'
 import { HomePopularMoviesOnMova } from '@organisms/HomeOrganisms/Main/PopularMoviesOnMova'
 import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
 import { HomeRecommendedForYou } from '@organisms/HomeOrganisms/Main/RecommendedForYou'
@@ -30,6 +31,9 @@ const HomeTemplate: FC = () => {
 
                     {/* Recommended For You */}
                     <HomeRecommendedForYou />
+
+                    {/* Now Trending */}
+                    <HomeNowTrending />
                 </div>
 
                 {/*  Side  */}
