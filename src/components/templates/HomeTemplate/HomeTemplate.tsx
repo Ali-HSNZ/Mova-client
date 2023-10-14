@@ -5,6 +5,7 @@ import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
 import { HomeMovieRating } from '@organisms/HomeOrganisms/Main/MovieRating'
 import { HomePopularMoviesOnMova } from '@organisms/HomeOrganisms/Main/PopularMoviesOnMova'
 import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
+import { HomeRecommendedForYou } from '@organisms/HomeOrganisms/Main/RecommendedForYou'
 import { HomeContinue } from '@organisms/HomeOrganisms/Side/Continue'
 import { HomeGenres } from '@organisms/HomeOrganisms/Side/Genres'
 import { HomeTopRated } from '@organisms/HomeOrganisms/Side/TopRated'
@@ -26,6 +27,9 @@ const HomeTemplate: FC = () => {
 
                     {/* Movie Rating */}
                     <HomeMovieRating />
+
+                    {/* Recommended For You */}
+                    <HomeRecommendedForYou />
                 </div>
 
                 {/*  Side  */}

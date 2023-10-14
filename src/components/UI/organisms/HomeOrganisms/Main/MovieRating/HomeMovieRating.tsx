@@ -1,5 +1,3 @@
-import { IconPlayerPlay } from '@tabler/icons-react'
-
 import { Button } from '@atoms/Button'
 
 import { homeMovieRatingData, type THomeMovieRatingDetail } from './resources'
@@ -12,7 +10,7 @@ const HomeMovieRating = () => {
                 {homeMovieRatingData.map((movie: THomeMovieRatingDetail, index: number) => (
                     <div
                         key={movie.id}
-                        className='bg-[#121212] border-[5px] border-[#0a0a0a] rounded-lg py-2 px-4 flex justify-between items-center'
+                        className='bg-darkPrimary border-[5px] border-darkSecondary rounded-lg py-2 px-4 flex justify-between items-center'
                     >
                         <div className='flex items-center  gap-x-4'>
                             {/* Title */}
@@ -32,8 +30,8 @@ const HomeMovieRating = () => {
                         </div>
 
                         {/* Play Button */}
-                        <Button className='rounded-full px-2 h-[42px] border-2 border-[#0a0a0a] bg-[#0d0d0d]'>
-                            <IconPlayerPlay className='text-yellowPrimary' />
+                        <Button className='rounded-lg font-normal px-4 h-9 text-yellowPrimary bg-darkSecondary'>
+                            Watch
                         </Button>
                     </div>
                 ))}

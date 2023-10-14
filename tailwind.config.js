@@ -18,6 +18,10 @@ module.exports = {
                 yellowPrimary: '#f8b319',
                 yellowSecondary: '#fde68a',
 
+                // Dark
+                darkPrimary: '#121212',
+                darkSecondary: '#0a0a0a',
+
                 // Gray
                 graySecondary: '#94a3b8',
                 grayPrimary: '#374151',
