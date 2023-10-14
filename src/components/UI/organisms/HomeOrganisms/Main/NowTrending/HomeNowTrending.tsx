@@ -40,7 +40,7 @@ const HomeNowTrending: FC = () => {
                                 <p className='truncate'>{movie.title}</p>
 
                                 {/* Watch Movie Button */}
-                                <Button className='h-7 px-4 bg-darkPrimary font-normal border-darkPrimary text-yellowPrimary  '>
+                                <Button className='h-9 px-4 bg-darkPrimary font-normal border-darkPrimary text-yellowPrimary  '>
                                     Watch
                                 </Button>
                             </div>

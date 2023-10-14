@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import { BaseLayout } from 'src/components/partials/layouts/base'
 
+import { HomeComedySeries } from '@organisms/HomeOrganisms/Main/ComedySeries'
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
 import { HomeMovieRating } from '@organisms/HomeOrganisms/Main/MovieRating'
 import { HomeNowTrending } from '@organisms/HomeOrganisms/Main/NowTrending'
@@ -34,6 +35,9 @@ const HomeTemplate: FC = () => {
 
                     {/* Now Trending */}
                     <HomeNowTrending />
+
+                    {/* Comedy Series */}
+                    <HomeComedySeries />
                 </div>
 
                 {/*  Side  */}
