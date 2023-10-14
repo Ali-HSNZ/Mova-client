@@ -1,3 +1,3 @@
-import HomePopularMoviesOnMova from './PopularMoviesOnMova'
+import HomePopularMoviesOnMova from './HomePopularMoviesOnMova'
 
 export { HomePopularMoviesOnMova }
