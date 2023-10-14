@@ -18,7 +18,7 @@ const HomeNowTrending: FC = () => {
                 },
                 mode: 'free',
             }}
-            title='Top Rated'
+            title='Now Trending'
         >
             <>
                 {sliderData.map((movie: THomeNowTrendingData) => (
