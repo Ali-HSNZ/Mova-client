@@ -2,6 +2,7 @@ import { type FC } from 'react'
 import { BaseLayout } from 'src/components/partials/layouts/base'
 
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
+import { HomeMovieRating } from '@organisms/HomeOrganisms/Main/MovieRating'
 import { HomePopularMoviesOnMova } from '@organisms/HomeOrganisms/Main/PopularMoviesOnMova'
 import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
 import { HomeContinue } from '@organisms/HomeOrganisms/Side/Continue'
@@ -22,6 +23,9 @@ const HomeTemplate: FC = () => {
 
                     {/* Popular Series On Mova */}
                     <HomePopularSeriesOnMova />
+
+                    {/* Movie Rating */}
+                    <HomeMovieRating />
                 </div>
 
                 {/*  Side  */}
