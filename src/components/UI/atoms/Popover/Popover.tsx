@@ -1,20 +1,27 @@
-import { type FC } from 'react'
-import { Popover, type PopoverProps } from '@mantine/core'
+import { Popover } from '@mantine/core'
 
-const CustomPopover: FC<PopoverProps & { dropdownClassName: string }> = ({
-    opened,
-    children,
-    dropdownClassName,
-    withArrow = true,
-    position = 'bottom',
-    styles,
-}) => {
+import { DPopoverDropdown, DPopoverTarget, type TDPopoverType } from './resources'
+
+/**
+ * You Cannot access .Notation selector from a client module on the server component. You can only pass the imported name through.
+ * Make sure to use this component inside a client component instead of server component.
+ */
+
+const DPopover: TDPopoverType = ({ children, classNames, ...rest }): JSX.Element => {
+    /**
+     * Combining classNames to establish a consistent and reusable base style for the component across the project.
+     * We can overwrite its style in specific situations for fine-tuned adjustments.
+     * Spread remaining props from TDPopoverType
+     */
     return (
-        <Popover opened={opened} position={position} styles={styles} withArrow={withArrow}>
-            {/* Popup Dropdown */}
-            <Popover.Dropdown className={dropdownClassName}>{children}</Popover.Dropdown>
+        <Popover classNames={{ ...classNames }} {...rest}>
+            {children}
         </Popover>
     )
 }
 
-export default CustomPopover
+DPopover.Target = DPopoverTarget
+
+DPopover.Dropdown = DPopoverDropdown
+
+export default DPopover

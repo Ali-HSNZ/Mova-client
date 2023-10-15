@@ -5,8 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
-    IconAddressBook,
-    IconBell,
+    IconAddressBook, 
     IconFilter,
     IconLogout,
     IconMenu2,
@@ -54,6 +53,7 @@ const Header: FC = () => {
                 </>
             </Drawer>
 
+            <div id='header'></div>
             <div className='flex gap-x-6 md:gap-x-10 w-full  pt-6 px-6 '>
                 {/* Menu Button ---- Showed in Responsive ----  >lg: hidden */}
                 <Button
@@ -127,66 +127,61 @@ const Header: FC = () => {
 
                     {/* Profile */}
                     <div className='sm:col-span-2 flex items-center justify-end xl:justify-between gap-6 text-center'>
-                        {/* Notification Button */}
-                        <Button className='bg-grayPrimary relative p-[24px] rounded-md'>
-                            <IconBell
-                                size={22}
-                                className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
-                            />
-                        </Button>
+                        {/* User Profile Button */}
+                        <div className='flex relative'>
+                            {/* Popup */}
+                            <Popover
+                                shadow='sm'
+                                position='top'
+                                onChange={setOpened}
+                                opened={opened}
+                                closeOnClickOutside
+                            >
+                                <Popover.Target>
+                                    <Button
+                                        onClick={() => setOpened(!opened)}
+                                        className=' bg-grayPrimary relative p-[24px] rounded-md'
+                                    >
+                                        <IconUser
+                                            size={22}
+                                            className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
+                                        />
+                                    </Button>
+                                </Popover.Target>
+                                <Popover.Dropdown className='p-0'>
+                                    {/* Popup Dropdown */}
+                                    <div className='flex flex-col z-50 relative  font-medium'>
+                                        {/* Profile Icon */}
+                                        <div className='text-sm text-whiteSecondary flex gap-x-4 rounded rounded-b-none py-4 items-center cursor-pointer px-6 transition-all duration-300 hover:bg-gray-800 bg-grayPrimary  justify-between  '>
+                                            <span>Profile</span>
+                                            <IconAddressBook size={23} />
+                                        </div>
+
+                                        {/* Line */}
+                                        <hr className='border-whiteSecondary' />
+
+                                        {/* Logout Icon */}
+                                        <div className='text-sm flex gap-x-4 rounded rounded-t-none py-4 items-center cursor-pointer transition-all duration-300 hover:bg-gray-800 bg-grayPrimary  px-6 justify-between '>
+                                            <span className='text-whiteSecondary'>Log Out</span>
+                                            <IconLogout className='text-redSecondary' size={21} />
+                                        </div>
+                                    </div>
+                                </Popover.Dropdown>
+                            </Popover>
+                        </div>
 
                         {/* User Name */}
                         <span className='hidden xl:block text-yellowPrimary font-bold text-lg truncate'>
                             Ali Hassanzadeh
                         </span>
 
-                        {/* User Profile Button */}
-                        <div className='flex relative'>
-                            <Button
-                                className=' bg-grayPrimary relative p-[24px] rounded-md'
-                                onClick={() => setOpened((o) => !o)}
-                            >
-                                <IconUser
-                                    size={22}
-                                    className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
-                                />
-                            </Button>
-
-                            {/* Popup */}
-                            <Popover
-                                opened={opened}
-                                dropdownClassName='bg-grayPrimary border-whiteSecondary -left-[82px] '
-                                styles={{
-                                    arrow: {
-                                        right: '18%',
-                                        transform: 'translate(50%, 0)',
-                                        border: '1px solid #495057',
-                                    },
-                                    dropdown: {
-                                        padding: 0,
-                                        transform: 'translate(0, 50%)',
-                                    },
-                                }}
-                            >
-                                {/* Popup Dropdown */}
-                                <div className='flex flex-col z-50 relative min-w-[110px] font-medium'>
-                                    {/* Profile Icon */}
-                                    <div className='text-sm text-whiteSecondary flex gap-x-4 rounded rounded-b-none py-4 items-center cursor-pointer px-6 hover:bg-grayPrimary justify-between  '>
-                                        <span>Profile</span>
-                                        <IconAddressBook size={23} />
-                                    </div>
-
-                                    {/* Line */}
-                                    <hr className='border-whiteSecondary' />
-
-                                    {/* Logout Icon */}
-                                    <div className='text-sm flex gap-x-4 rounded rounded-t-none py-4 items-center cursor-pointer hover:bg-grayPrimary px-6 justify-between '>
-                                        <span className='text-whiteSecondary'>Log Out</span>
-                                        <IconLogout className='text-redSecondary ' size={21} />
-                                    </div>
-                                </div>
-                            </Popover>
-                        </div>
+                        {/* Menu Button */}
+                        <Button className='bg-grayPrimary relative p-[24px] rounded-md'>
+                            <IconMenu2
+                                size={22}
+                                className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
+                            />
+                        </Button>
                     </div>
                 </div>
             </div>
