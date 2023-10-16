@@ -1,6 +1,7 @@
 'use client'
 
 import { type FC } from 'react'
+import Image from 'next/image'
 import { IconPlus } from '@tabler/icons-react'
 
 import { MultiKeenSlider } from '@molecules/sliders/MultiKeenSlider'
@@ -32,10 +33,13 @@ const HomeTopRated: FC = () => {
                         className='keen-slider__slide h-32 rounded-2xl relative'
                     >
                         {/* Movie Image */}
-                        <div
-                            className='filter brightness-secondary h-full w-full bg-center flex flex-col text-whitePrimary bg-cover'
-                            style={{ backgroundImage: `url('${movie.imageSrc}')` }}
-                        ></div>
+                        <Image
+                            loading='lazy'
+                            alt={movie.title}
+                            src={movie.imageSrc}
+                            fill
+                            className='filter brightness-secondary h-full w-full bg-cover'
+                        />
 
                         <div className='absolute inset-0  w-full p-3 flex flex-col justify-between'>
                             {/* Movie Title */}

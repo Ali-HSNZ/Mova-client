@@ -4,15 +4,7 @@ import { type FC, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import {
-    IconAddressBook, 
-    IconFilter,
-    IconLogout,
-    IconMenu2,
-    IconSearch,
-    IconUser,
-    IconX,
-} from '@tabler/icons-react'
+import { IconAddressBook, IconFilter, IconLogout, IconMenu2, IconSearch, IconUser, IconX } from '@tabler/icons-react'
 
 import { Button } from '@atoms/Button'
 import { Drawer } from '@atoms/Drawer'
@@ -68,7 +60,7 @@ const Header: FC = () => {
 
                 {/* Mova Logo Image */}
                 <div className={`items-center justify-start flex lg:w-[230px]`}>
-                    <Image width={40} height={40} src={logoImage.src} alt='Mova Logo' />
+                    <Image loading='lazy' width={40} height={40} src={logoImage.src} alt='Mova Logo' />
                 </div>
 
                 {/* Parent Sections - Search Input And Menu Links Sections  And Profile Section */}
