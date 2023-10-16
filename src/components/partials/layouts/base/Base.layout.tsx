@@ -14,10 +14,12 @@ const BaseLayout: FC<ILayoutProps> = ({ children }) => {
                     <div className='hidden lg:block  md:px-4'>
                         <Sidebar />
                     </div>
-                    <main className='mt-6'>{children}</main>
+                    <section className='flex-grow  overflow-hidden  '>
+                        <div className='h-full'>{children}</div>
+                    </section>
                 </div>
             </div>
         </section>
     )
 }
-export default BaseLayout
+export default BaseLayout 

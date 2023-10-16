@@ -35,7 +35,7 @@ const MainKeenSlider: FC<IMainKeenSliderProps> = ({ children }) => {
     return (
         <article className='relative '>
             {/* Keen Slider Children */}
-            <div ref={sliderRef} className='keen-slider h-[320px] rounded-lg'>
+            <div ref={sliderRef} className='keen-slider h-[320px] rounded-lg w-full'>
                 {children}
             </div>
 

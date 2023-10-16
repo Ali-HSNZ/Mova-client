@@ -49,7 +49,7 @@ const HomeGenres: FC = () => {
                                 {/* Genre Title */}
                                 <div className='absolute left-1/2 top-1/2  w-full transform text-center -translate-x-1/2 -translate-y-1/2 p-2 '>
                                     <span className='text-whiteSecondary text-lg font-semibold'>
-                                        {genreDetail.title}{' '}
+                                        {genreDetail.title} 
                                     </span>
                                 </div>
                             </Link>
