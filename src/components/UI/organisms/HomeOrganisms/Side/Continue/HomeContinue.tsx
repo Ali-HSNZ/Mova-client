@@ -35,11 +35,10 @@ const HomeContinue: FC = () => {
                             {/* Movie Image */}
                             <div className='relative w-[64px] h-[80px]'>
                                 <Image
-                                    priority
+                                    loading='lazy'
                                     alt={movie.title}
                                     src={movie.imageSrc}
                                     fill
-                                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                                     className='h-[70px] w-14 object-cover rounded-md '
                                 />
                             </div>

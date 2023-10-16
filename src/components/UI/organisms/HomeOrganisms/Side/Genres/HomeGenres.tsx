@@ -1,6 +1,7 @@
 'use client'
 
 import { type FC } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { MultiKeenSlider } from '@molecules/sliders/MultiKeenSlider'
@@ -34,13 +35,16 @@ const HomeGenres: FC = () => {
                             <Link
                                 key={genreDetail.id}
                                 href={genreDetail.href}
-                                className='flex w-full relative rounded-2xl overflow-hidden'
+                                className='flex w-full  h-[110px] relative rounded-2xl overflow-hidden'
                             >
                                 {/* Genre Image */}
-                                <div
-                                    className='filter brightness-secondary h-[110px] w-full  text-whitePrimary bg-cover'
-                                    style={{ backgroundImage: `url('${genreDetail.imageSrc}')` }}
-                                ></div>
+                                <Image
+                                    loading='lazy'
+                                    alt={genreDetail.title}
+                                    src={genreDetail.imageSrc}
+                                    fill
+                                    className='filter brightness-secondary w-full  bg-cover '
+                                />
 
                                 {/* Genre Title */}
                                 <div className='absolute left-1/2 top-1/2  w-full transform text-center -translate-x-1/2 -translate-y-1/2 p-2 '>

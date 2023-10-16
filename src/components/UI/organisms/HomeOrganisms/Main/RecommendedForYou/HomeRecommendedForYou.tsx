@@ -11,9 +11,10 @@ const HomeRecommendedForYou = () => {
             <div className='h-[400px] mt-4 relative rounded-xl overflow-hidden'>
                 <Image
                     alt='annable image'
+                    loading='lazy'
                     src={annable.src}
                     fill
-                    className='  brightness-secondary object-cover min-w-full h-full w-full'
+                    className='brightness-secondary object-cover min-w-full h-full w-full'
                 />
                 <section className='absolute z-10 p-6 gap-y-2 lg:gap-y-3 inset-0 flex justify-end flex-col w-full  items-start'>
                     <div className='flex gap-x-4'>

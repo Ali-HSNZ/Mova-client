@@ -21,6 +21,7 @@ const HomeMainSlider: FC = () => {
                             <Image
                                 src={movie.imageSrc}
                                 alt={movie.title}
+                                loading='lazy'
                                 width={800}
                                 height={320}
                                 className='w-full min-h-full object-cover'
