@@ -1,7 +1,7 @@
 'use client'
 import { type FC, useState } from 'react'
-import { HiOutlineArrowLeftCircle, HiOutlineArrowRightCircle } from 'react-icons/hi2'
 import { BaseLayout } from 'src/components/partials/layouts/base'
+import { IconChevronLeft, IconChevronRight, IconCircleChevronLeft, IconCircleChevronRight } from '@tabler/icons-react'
 
 import { HomeComedySeries } from '@organisms/HomeOrganisms/Main/ComedySeries'
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
@@ -53,33 +53,42 @@ const HomeTemplate: FC = () => {
                     <HomeWarMovies />
                 </div>
                 <div
-                    className={`   relative flex flex-col h-full whitespace-nowrap rounded-2xl  transition-all  duration-700 ${
+                    className={` flex flex-col h-full whitespace-nowrap rounded-2xl  transition-all  duration-700 ${
                         open ? 'w-4/12 ' : 'w-1/12 '
                     }`}
                 >
-                    {/* <div
-                        className={`w-full flex transition-all  duration-700  ${
-                            open ? 'justify-start' : 'justify-center    '
-                        }`}
-                    >
-                        <div onClick={() => setOpen(!open)} className={`cursor-pointer text-4xl  swap swap-rotate`}>
-                            <HiOutlineArrowRightCircle className={` ${open ? 'swap-on' : 'swap-off'}   `} />
-                            <HiOutlineArrowLeftCircle className={` ${open ? 'swap-off' : 'swap-on'}   `} />
-                        </div>
-                    </div> */}
                     <div
-                        className={`w-full absolute left-1/2  transform  -translate-x-1/2  transition-all  duration-700  ${
-                            open ? ' ' : ' '
-                        }  z-20`}
+                        className={`w-full flex justify-between  transition-all duration-500${open ? ' ' : ' '}  z-20`}
                     >
-                        <div onClick={() => setOpen(!open)} className={`cursor-pointer text-4xl  swap swap-rotate`}>
-                            <HiOutlineArrowRightCircle className={` ${open ? 'swap-on' : 'swap-off'}   `} />
-                            <HiOutlineArrowLeftCircle className={` ${open ? 'swap-off' : 'swap-on'}   `} />
+                        <div
+                            className='w-full flex justify-center text-xl text-grayPrimary'
+                            onClick={() => setOpen(!open)}
+                        >
+                            <div
+                                className={` flex items-center border-2 border-grayPrimary cursor-pointer rounded-md transition-all duration-500     ${
+                                    open ? 'w-full px-4 py-2 justify-between' : 'rounded-full p-2 justify-center'
+                                }`}
+                            >
+                                {open ? (
+                                    <>
+                                        <span className='text-sm font-bold'>collapse</span>
+                                        <IconChevronRight size={32} className={``} />
+                                    </>
+                                ) : (
+                                    <IconChevronLeft size={32} className={``} />
+                                )}
+                            </div>
                         </div>
+                        {/* <div
+                            onClick={() => setOpen(!open)}
+                            className={`cursor-pointer text-3xl text-graySecondary swap swap-rotate`}
+                        >
+                            <IconCircleChevronLeft className={` ${open ? 'swap-off' : 'swap-on'}   `} />
+                            <IconChevronLeft className={` ${open ? 'swap-on' : 'swap-off'}   `} />
+                        </div> */}
                     </div>
-
                     <div
-                        className={`flex pt-12 flex-col transition-all duration-500 ${
+                        className={`flex pt-10 flex-col transition-all duration-500 ${
                             open ? 'opacity-100' : 'opacity-0'
                         }`}
                     >
