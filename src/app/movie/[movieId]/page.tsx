@@ -7,18 +7,20 @@ import { IconPlus } from '@tabler/icons-react'
 
 import { sliderData } from '@organisms/HomeOrganisms/Main/ComedySeries/resources'
 
+import Comments from './components/Comments/Comments'
 import Wrapper from './components/Wrapper'
 const MovieDetail: FC<{ params: { movieId: string } }> = ({ params }) => {
     /* MovieDetail = {params.movieId} */
     const dataDetail = sliderData.find((items) => items.id === +params.movieId)
 
+    
     if (dataDetail) {
         return (
             <Wrapper data={dataDetail}>
-                <div className='w-full grid items-center grid-cols-3 gap-x-5  '>
+                <div className='w-full grid items-center grid-cols-3 gap-x-5  text-graySecondary'>
                     <div className='col-span-2 '>
                         <div className='flex flex-col gap-y-2'>
-                            <span className='text-4xl font-bold'>{dataDetail.title}</span>
+                            <span className='text-4xl font-bold text-white'>{dataDetail.title}</span>
                             <Rating fractions={dataDetail.rate} defaultValue={dataDetail.rate} readOnly size='md' />
                             <span className='text-sm font-bold'>10M+ views</span>
                             <Image src={imbdImg.src} width={60} height={60} />
@@ -45,6 +47,21 @@ const MovieDetail: FC<{ params: { movieId: string } }> = ({ params }) => {
                         <img src={dataDetail.imageSrc} className='object-cover h-full  w-full' alt='' />
                     </div>
                 </div>
+
+                {/* <Comments /> */}
+                {/* <span className='text-2xl font-bold mt-8 mb-5'>Comments</span>
+                <div className='w-full flex flex-col gap-y-2'>
+                    <div className='flex'>
+                        <div className='flex items-center justify-center rounded-full bg-blue-600'>1</div>
+                        <div className='flex flex-col'>
+                            <span>1</span>
+                            <span>1</span>
+                            <span>1</span>
+                        </div>
+                    </div>
+                </div> */}
+
+                <span className='text-2xl font-bold mt-8 mb-5 text-graySecondary'>Detail</span>
             </Wrapper>
         )
     } else {
