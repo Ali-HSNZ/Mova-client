@@ -1,4 +1,5 @@
 import { type FC } from 'react'
+import Link from 'next/link'
 import { IconPlus } from '@tabler/icons-react'
 
 import { MultiKeenSlider } from '@molecules/sliders/MultiKeenSlider'
@@ -53,9 +54,14 @@ const HomePopularMoviesOnMova: FC = () => {
                                     </Button>
 
                                     {/* Watch Button */}
-                                    <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
+                                    <Link href={`movie/${movie.id}`}>
+                                        <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
+                                            Watch
+                                        </Button>
+                                    </Link>
+                                    {/* <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
                                         Watch
-                                    </Button>
+                                    </Button> */}
                                 </div>
                             </div>
                         </div>
