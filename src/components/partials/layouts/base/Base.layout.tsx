@@ -22,4 +22,4 @@ const BaseLayout: FC<ILayoutProps> = ({ children }) => {
         </section>
     )
 }
-export default BaseLayout 
+export default BaseLayout
