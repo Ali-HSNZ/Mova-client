@@ -1,4 +1,5 @@
 import { type FC } from 'react'
+import Link from 'next/link'
 import { Button, Rating } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
 
@@ -36,9 +37,9 @@ const MovieCard: FC<IMovieCardProps> = ({ genreList = [], imageUrl = '', rate = 
                         </Button>
 
                         {/* Watch Button */}
-                        <Button className='w-full h-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
+                        <Link href={'/movie/id'} className='w-full flex text-sm justify-center items-center   shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
                             Watch
-                        </Button>
+                        </Link>
                     </div>
                 </div>
             </div>
