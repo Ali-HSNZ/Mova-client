@@ -13,9 +13,7 @@ const BaseLayout: FC<IBaseLayoutProps> = ({ children, isSidebar = true }) => {
                             <Sidebar />
                         </div>
                     )}
-                    <section className='flex-grow  overflow-hidden  '>
-                        <div className='h-full'>{children}</div>
-                    </section>
+                    <main className='mt-6'>{children}</main>
                 </div>
             </div>
         </section>

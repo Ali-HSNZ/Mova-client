@@ -4,7 +4,17 @@ import { type FC, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { IconAddressBook, IconFilter, IconLogout, IconMenu2, IconSearch, IconUser, IconX } from '@tabler/icons-react'
+import {
+    IconAddressBook,
+    IconAlertCircle,
+    IconBell,
+    IconFilter,
+    IconLogout,
+    IconMenu2,
+    IconSearch,
+    IconUser,
+    IconX,
+} from '@tabler/icons-react'
 
 import { Button } from '@atoms/Button'
 import { Drawer } from '@atoms/Drawer'
@@ -45,9 +55,8 @@ const Header: FC = () => {
                 </>
             </Drawer>
 
-            <div id='header'></div>
-            <div className='flex gap-x-6 md:gap-x-10 w-full  pt-6 px-6 '>
-                {/* Menu Button ---- Showed in Responsive ----  >lg: hidden */}
+            <div className='flex gap-x-6 md:gap-x-10 w-full pt-6 px-6  '>
+                {/* Menu Button ---- Showed in Responsive ----> lg: hidden */}
                 <Button
                     onClick={() => setDrawer(true)}
                     className=' bg-grayPrimary relative p-[24px] rounded-md  block lg:hidden'
@@ -63,7 +72,7 @@ const Header: FC = () => {
                     <Image loading='lazy' width={40} height={40} src={logoImage.src} alt='Mova Logo' />
                 </div>
 
-                {/* Parent Sections - Search Input And Menu Links Sections  And Profile Section */}
+                {/* Parent Sections - Search Input And Menu Links Sections And Profile Section */}
                 <div className='grid gap-x-10 sm:grid-cols-8 flex-grow'>
                     {/* Search Input Section And Menu Links Section */}
                     <div className='hidden sm:flex col-span-6 md:col-span-6 text-center justify-between items-center '>
@@ -125,6 +134,7 @@ const Header: FC = () => {
                             <Popover
                                 shadow='sm'
                                 position='top'
+                                withArrow
                                 onChange={setOpened}
                                 opened={opened}
                                 closeOnClickOutside
@@ -169,7 +179,7 @@ const Header: FC = () => {
 
                         {/* Menu Button */}
                         <Button className='bg-grayPrimary relative p-[24px] rounded-md'>
-                            <IconMenu2
+                            <IconBell
                                 size={22}
                                 className='text-whitePrimary absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'
                             />

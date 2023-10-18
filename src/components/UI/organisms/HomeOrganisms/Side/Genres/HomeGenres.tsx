@@ -35,7 +35,7 @@ const HomeGenres: FC = () => {
                             <Link
                                 key={genreDetail.id}
                                 href={genreDetail.href}
-                                className='flex w-full  h-[110px] relative rounded-2xl overflow-hidden'
+                                className='flex w-full h-[110px] relative rounded-2xl overflow-hidden'
                             >
                                 {/* Genre Image */}
                                 <Image

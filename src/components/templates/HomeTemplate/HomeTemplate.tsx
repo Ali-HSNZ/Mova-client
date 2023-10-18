@@ -1,7 +1,5 @@
-'use client'
-import { type FC, useState } from 'react'
+import { type FC } from 'react'
 import { BaseLayout } from 'src/components/partials/layouts/base'
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
 
 import { HomeComedySeries } from '@organisms/HomeOrganisms/Main/ComedySeries'
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
@@ -16,16 +14,14 @@ import { HomeGenres } from '@organisms/HomeOrganisms/Side/Genres'
 import { HomeTopRated } from '@organisms/HomeOrganisms/Side/TopRated'
 
 const HomeTemplate: FC = () => {
-    const [open, setOpen] = useState(false)
     return (
         <BaseLayout>
-            <section className={`w-full flex justify-between  gap-x-2 mt-10 pr-3`}>
-                <div
-                    className={`  h-full flex  flex-col gap-y-6 rounded-2xl  transition-all  duration-700  ${
-                        open ? 'w-8/12' : 'w-11/12'
-                    }`}
-                >
+            <section className='grid  gap-y-6 md:gap-y-0 grid-cols-10 gap-x-10'>
+                {/* Main ----- (Center)  */}
+                <div className='col-span-10 flex flex-col gap-y-6 px-6 xl:px-0 xl:col-span-6 2xl:col-span-7 md:pl-6'>
+                    {/* Main Slider */}
                     <HomeMainSlider />
+
                     {/* Popular Movies On Mova */}
                     <HomePopularMoviesOnMova />
 
@@ -47,52 +43,19 @@ const HomeTemplate: FC = () => {
                     {/* War Movies */}
                     <HomeWarMovies />
                 </div>
-                <div
-                    className={`flex flex-col h-full whitespace-nowrap rounded-2xl  transition-all  duration-700 ${
-                        open ? 'w-4/12 ' : 'w-1/12 '
-                    }`}
-                >
-                    <div
-                        className={`w-full flex justify-between  transition-all duration-500${open ? ' ' : ' '}  z-20`}
-                    >
-                        <div
-                            className='w-full flex justify-center text-xl text-graySecondary'
-                            onClick={() => setOpen(!open)}
-                        >
-                            <div
-                                className={`w-full flex items-center border-2 border-graySecondary text-graySecondary cursor-pointer rounded-md transition-all duration-500
-                                px-4 py-2  ${open ? 'justify-between' : 'justify-center'}
-                                `}
-                            >
-                                {open ? (
-                                    <>
-                                        <span className='text-sm font-bold'>collapse</span>
-                                        <IconChevronRight size={32} />
-                                    </>
-                                ) : (
-                                    <IconChevronLeft size={32} />
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        className={`flex pt-10 flex-col transition-all duration-500 ${
-                            open ? 'opacity-100' : 'opacity-0'
-                        }`}
-                    >
-                        {/* Continue */}
-                        <HomeContinue />
+                {/*  Side  */}
+                <div className='xl:sticky xl:top-6 overflow-y-auto xl:h-screen col-span-10 mt-6 px-6 xl:px-0 xl:mt-0 xl:col-span-4 2xl:col-span-3 flex flex-col gap-y-6'>
+                    {/* Continue */}
+                    <HomeContinue />
 
-                        {/* Top Rated */}
-                        <HomeTopRated />
+                    {/* Top Rated */}
+                    <HomeTopRated />
 
-                        {/* Genres */}
-                        <HomeGenres />
-                    </div>
+                    {/* Genres */}
+                    <HomeGenres />
                 </div>
             </section>
         </BaseLayout>
     )
 }
-
 export default HomeTemplate
