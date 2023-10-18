@@ -1,8 +1,10 @@
+import { type FC } from 'react'
+
 import { Button } from '@atoms/Button'
 
 import { homeMovieRatingData, type THomeMovieRatingDetail } from './resources'
 
-const HomeMovieRating = () => {
+const HomeMovieRating: FC = () => {
     return (
         <div>
             <h1 className={`font-bold text-xl text-whitePrimary`}>Top Rating Movies</h1>

@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
     IconAddressBook,
-    IconAlertCircle,
     IconBell,
     IconFilter,
     IconLogout,

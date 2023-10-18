@@ -1,10 +1,11 @@
+import { type FC } from 'react'
 import Image from 'next/image'
 import annable from '@images/slider/moneyHeist.webp'
 import { IconPlayerPlay, IconPlus } from '@tabler/icons-react'
 
 import { Button } from '@atoms/Button'
 
-const HomeRecommendedForYou = () => {
+const HomeRecommendedForYou: FC = () => {
     return (
         <section className='w-full'>
             <h1 className={`font-bold text-xl text-whitePrimary`}>Recommended For You</h1>
