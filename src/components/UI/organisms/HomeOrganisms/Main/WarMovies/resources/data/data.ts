@@ -1,16 +1,9 @@
 import { type THomeWarMoviesDetail } from '..'
-
-import animationSpiderman from '@public/images/slider/animationSpiderMan.jpg'
-import annabel from '@public/images/slider/Annable.jpg'
-import avatar from '@public/images/slider/avatar-2009.webp'
-import dayShift from '@public/images/slider/DayShift.jpg'
-import enolaHolmes2 from '@public/images/slider/EnolaHolmes2.jpg'
-
 const sliderData: THomeWarMoviesDetail[] = [
     {
         title: 'AnimationSpiderman',
         rate: 2.5,
-        imageSrc: animationSpiderman.src,
+        imageSrc: 'https://i.pinimg.com/564x/13/9e/c5/139ec5ed56ba222ff4eb34f63d8c9e6b.jpg',
         id: 1,
         genre: ['Action', 'Comedy', 'Action', 'Comedy'],
         episode: 4,
@@ -18,7 +11,7 @@ const sliderData: THomeWarMoviesDetail[] = [
     {
         title: 'Annabel',
         rate: 4.5,
-        imageSrc: annabel.src,
+        imageSrc: 'https://i.pinimg.com/564x/b0/59/0a/b0590aca5aa1e71e3c4e160feadb518b.jpg',
         genre: ['Action', 'Comedy'],
         episode: 4,
         id: 2,
@@ -26,7 +19,7 @@ const sliderData: THomeWarMoviesDetail[] = [
     {
         title: 'Avatar',
         rate: 4,
-        imageSrc: avatar.src,
+        imageSrc: 'https://i.pinimg.com/564x/30/14/70/3014703f2b0c67a3107226fd16ef9a11.jpg',
         genre: ['Action', 'Comedy'],
         episode: 4,
         id: 3,
@@ -36,7 +29,7 @@ const sliderData: THomeWarMoviesDetail[] = [
         rate: 3.7,
         genre: ['Action', 'Comedy'],
         episode: 4,
-        imageSrc: dayShift.src,
+        imageSrc: 'https://i.pinimg.com/564x/5e/5e/63/5e5e633ba236c020fa936843fb202dfd.jpg',
         id: 4,
     },
     {
@@ -44,13 +37,13 @@ const sliderData: THomeWarMoviesDetail[] = [
         rate: 3.2,
         genre: ['Action', 'Comedy'],
         episode: 4,
-        imageSrc: enolaHolmes2.src,
+        imageSrc: 'https://i.pinimg.com/564x/3e/37/fd/3e37fdd373bcf15c74e3b3c5ceb73a42.jpg',
         id: 5,
     },
     {
         title: 'AnimationSpiderman',
         rate: 2.5,
-        imageSrc: animationSpiderman.src,
+        imageSrc: 'https://i.pinimg.com/564x/e1/9c/a2/e19ca2127c82cfdc3ca5f05f10a9f232.jpg',
         genre: ['Action', 'Comedy'],
         episode: 4,
         id: 6,
@@ -58,7 +51,7 @@ const sliderData: THomeWarMoviesDetail[] = [
     {
         title: 'Annabel',
         rate: 4.5,
-        imageSrc: annabel.src,
+        imageSrc: 'https://i.pinimg.com/564x/c5/8f/73/c58f7390276f7c3fa12dd45c3342c06e.jpg',
         id: 7,
         genre: ['Action', 'Comedy'],
         episode: 4,
@@ -68,7 +61,7 @@ const sliderData: THomeWarMoviesDetail[] = [
         rate: 4,
         genre: ['Action', 'Comedy'],
         episode: 4,
-        imageSrc: avatar.src,
+        imageSrc: 'https://i.pinimg.com/564x/c5/8f/73/c58f7390276f7c3fa12dd45c3342c06e.jpg',
         id: 8,
     },
     {
@@ -76,13 +69,13 @@ const sliderData: THomeWarMoviesDetail[] = [
         rate: 3.7,
         genre: ['Action', 'Comedy'],
         episode: 4,
-        imageSrc: dayShift.src,
+        imageSrc: 'https://i.pinimg.com/564x/ae/16/f9/ae16f93218f8d9bfa82a615ad9d2565d.jpg',
         id: 9,
     },
     {
         title: 'Venome',
         rate: 3.2,
-        imageSrc: enolaHolmes2.src,
+        imageSrc: 'https://i.pinimg.com/564x/9b/84/a4/9b84a4ce02b42fca507100d05fb672a8.jpg',
         genre: ['Action', 'Comedy'],
         episode: 4,
         id: 10,

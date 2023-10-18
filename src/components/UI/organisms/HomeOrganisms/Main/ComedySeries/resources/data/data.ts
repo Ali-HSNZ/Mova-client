@@ -1,17 +1,10 @@
 import { type THomeComedySeriesDetail } from '..'
 
-import animationSpiderman from '@public/images/slider/animationSpiderMan.jpg'
-import annabel from '@public/images/slider/Annable.jpg'
-import avatar from '@public/images/slider/avatar-2009.webp'
-import Batman from '@public/images/slider/Batman Be-Leaguered.jpg'
-import dayShift from '@public/images/slider/DayShift.jpg'
-import enolaHolmes2 from '@public/images/slider/EnolaHolmes2.jpg'
-
 const sliderData: THomeComedySeriesDetail[] = [
     {
         title: 'AnimationSpiderman',
         rate: 2.5,
-        imageSrc: animationSpiderman.src,
+        imageSrc: 'https://i.pinimg.com/564x/bf/50/0f/bf500f4f73c481654ebfc12af7a334b8.jpg',
         genre: ['Action', 'Comedy', 'Action', 'Comedy'],
         detail: 'A young man with spider-like abilities fights crime as a superhero in New York City while trying to have a normal personal life.',
         episode: 4,
@@ -20,7 +13,7 @@ const sliderData: THomeComedySeriesDetail[] = [
     {
         title: 'Annabel',
         rate: 4.5,
-        imageSrc: annabel.src,
+        imageSrc: 'https://i.pinimg.com/564x/e0/ec/7b/e0ec7bb127137c834b7f77546c9eceaa.jpg',
         genre: ['Action', 'Comedy'],
         detail: 'Annabelle is a 2014 American supernatural horror film directed by John R. Leonetti, written by Gary Dauberman and produced by Peter Safran and James Wan. It is a prequel to the 2013 film The Conjuring and the second installment in The Conjuring Universe franchise. The film was inspired by a story of a doll named Annabelle told by Ed and Lorraine Warren.[3] The film stars Annabelle Wallis, Ward Horton, and Alfre Woodard.',
         episode: 4,
@@ -29,7 +22,7 @@ const sliderData: THomeComedySeriesDetail[] = [
     {
         title: 'Avatar',
         rate: 4,
-        imageSrc: avatar.src,
+        imageSrc: 'https://i.pinimg.com/564x/75/12/4d/75124d9beb051446288c17eff77a6342.jpg',
         genre: ['Action', 'Comedy'],
         detail: 'Avatar (marketed as James Camerons Avatar) is a 2009 epic science fiction film directed, written, co-produced, and co-edited by James Cameron and starring Sam Worthington, Zoe Saldana, Stephen Lang, Michelle Rodriguez,[6] and Sigourney Weaver. It is the first installment in the Avatar film series. It is set in the mid-22nd century, when humans are colonizing Pandora, a lush habitable moon of a gas giant in the Alpha Centauri star system, in order to mine the valuable mineral unobtanium.[a] The expansion of the mining colony threatens the continued existence of a local tribe of Navi, a humanoid species indigenous to Pandora. The title of the film refers to a genetically engineered Navi body operated from the brain of a remotely located human that is used to interact with the natives of Pandora',
         episode: 4,
@@ -41,7 +34,7 @@ const sliderData: THomeComedySeriesDetail[] = [
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 4,
-        imageSrc: dayShift.src,
+        imageSrc: 'https://i.pinimg.com/564x/f4/bf/ec/f4bfec43cd2d0f73d698bad0379b7c43.jpg',
         id: 4,
     },
     {
@@ -50,13 +43,13 @@ const sliderData: THomeComedySeriesDetail[] = [
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 4,
-        imageSrc: enolaHolmes2.src,
+        imageSrc: 'https://i.pinimg.com/564x/f4/bf/ec/f4bfec43cd2d0f73d698bad0379b7c43.jpg',
         id: 5,
     },
     {
         title: 'Batman',
         rate: 2.5,
-        imageSrc: Batman.src,
+        imageSrc: 'https://i.pinimg.com/564x/af/6f/43/af6f43e51e9d78640a8b1fb30b18260f.jpg',
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 55,
@@ -65,7 +58,7 @@ const sliderData: THomeComedySeriesDetail[] = [
     {
         title: 'Annabel',
         rate: 4.5,
-        imageSrc: annabel.src,
+        imageSrc: 'https://i.pinimg.com/564x/af/6f/43/af6f43e51e9d78640a8b1fb30b18260f.jpg',
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 4,
@@ -77,7 +70,7 @@ const sliderData: THomeComedySeriesDetail[] = [
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 4,
-        imageSrc: avatar.src,
+        imageSrc: 'https://i.pinimg.com/564x/b4/d7/f5/b4d7f5e63f4c68538a9ac1cff82c2c49.jpg',
         id: 8,
     },
     {
@@ -86,13 +79,13 @@ const sliderData: THomeComedySeriesDetail[] = [
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 4,
-        imageSrc: dayShift.src,
+        imageSrc: 'https://i.pinimg.com/564x/36/0f/6c/360f6c1951961a6b0aefc3be29315e48.jpg',
         id: 9,
     },
     {
         title: 'Venome',
         rate: 3.2,
-        imageSrc: enolaHolmes2.src,
+        imageSrc: 'https://i.pinimg.com/564x/0c/0a/9f/0c0a9fed4bb804ae8a3b03dd494c6a21.jpg',
         genre: ['Action', 'Comedy'],
         detail: '',
         episode: 4,

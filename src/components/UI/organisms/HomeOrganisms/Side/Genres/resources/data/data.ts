@@ -1,12 +1,4 @@
 import { type THomeGenreMoviesData } from '..'
-import dayShift from '@images/slider/DayShift.jpg'
-import enolaHolmes2 from '@images/slider/EnolaHolmes2.jpg'
-import interstellar from '@images/slider/interstellar.jpg'
-import loki from '@images/slider/loki-thumbnail.jpg'
-import nobody from '@images/slider/nobody.jpg'
-import onePiece from '@images/slider/OnePiece.jpg'
-import spidermanNowayHome from '@images/slider/spidermanNowayHome.jpg'
-import wandaVisionSmall from '@images/slider/wandaVisionSmall.jpg'
 
 const sliderData: THomeGenreMoviesData[] = [
     {
@@ -15,13 +7,13 @@ const sliderData: THomeGenreMoviesData[] = [
             {
                 id: 0,
                 title: 'Scary',
-                imageSrc: loki.src,
+                imageSrc: 'https://i.pinimg.com/564x/5a/cc/76/5acc767f5739670c2d25cbcdc86306ee.jpg',
                 href: '#',
             },
             {
                 id: 1,
                 title: 'Action',
-                imageSrc: dayShift.src,
+                imageSrc: 'https://i.pinimg.com/564x/c1/a0/e9/c1a0e9e1a8016f3156bf2cc9d264d43f.jpg',
                 href: '#',
             },
         ],
@@ -32,13 +24,13 @@ const sliderData: THomeGenreMoviesData[] = [
             {
                 id: 0,
                 title: 'Animation',
-                imageSrc: spidermanNowayHome.src,
+                imageSrc: 'https://i.pinimg.com/564x/6e/1f/8e/6e1f8edca74f83f023da79542a843b61.jpg',
                 href: '#',
             },
             {
                 id: 1,
                 title: 'Science Fiction',
-                imageSrc: interstellar.src,
+                imageSrc: 'https://i.pinimg.com/564x/18/80/0b/18800bd0f203f51a542b2bb9a8949b55.jpg',
                 href: '#',
             },
         ],
@@ -49,13 +41,13 @@ const sliderData: THomeGenreMoviesData[] = [
             {
                 id: 0,
                 title: 'Adventure',
-                imageSrc: enolaHolmes2.src,
+                imageSrc: 'https://i.pinimg.com/564x/47/28/07/4728077084f1bb12d4e7c70243adce5f.jpg',
                 href: '#',
             },
             {
                 id: 1,
                 title: 'Comedy',
-                imageSrc: nobody.src,
+                imageSrc: 'https://i.pinimg.com/564x/0f/95/ff/0f95ff1ae0eedd9489acefb3005f32f7.jpg',
                 href: '#',
             },
         ],
@@ -66,13 +58,13 @@ const sliderData: THomeGenreMoviesData[] = [
             {
                 id: 0,
                 title: 'Scary',
-                imageSrc: onePiece.src,
+                imageSrc: 'https://i.pinimg.com/564x/6f/3b/e1/6f3be1eb17b1ef00e762f39aef573339.jpg',
                 href: '#',
             },
             {
                 id: 1,
                 title: 'Science Fiction',
-                imageSrc: wandaVisionSmall.src,
+                imageSrc: 'https://i.pinimg.com/736x/49/63/c9/4963c9624d02762dff62f7d1484149ff.jpg',
                 href: '#',
             },
         ],

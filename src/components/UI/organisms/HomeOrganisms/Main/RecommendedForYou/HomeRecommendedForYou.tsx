@@ -1,6 +1,5 @@
 import { type FC } from 'react'
 import Image from 'next/image'
-import annable from '@images/slider/moneyHeist.webp'
 import { IconPlayerPlay, IconPlus } from '@tabler/icons-react'
 
 import { Button } from '@atoms/Button'
@@ -13,7 +12,7 @@ const HomeRecommendedForYou: FC = () => {
                 <Image
                     alt='annable image'
                     loading='lazy'
-                    src={annable.src}
+                    src={'https://i.pinimg.com/564x/13/9e/c5/139ec5ed56ba222ff4eb34f63d8c9e6b.jpg'}
                     fill
                     className='brightness-secondary object-cover min-w-full h-full w-full'
                 />
@@ -28,10 +27,10 @@ const HomeRecommendedForYou: FC = () => {
                             </span>
                         ))}
                     </div>
-                    <h3 className='text-3xl font-bold'>Money Heist</h3>
+                    <h3 className='text-3xl font-bold'>Black Demon</h3>
                     <p className='w-full lg:w-5/6'>
-                        Money Heist: Korea – Joint Economic Area (Korean: 종이의 집: 공동경제구역) is a Korean
-                        television series and second series in the Money Heist franchise, based on the original Spanish
+                        Black Demon: Korea – Joint Economic Area (Korean: 종이의 집: 공동경제구역) is a Korean
+                        television series and second series in the Black Demon franchise, based on the original Spanish
                         series. The Korean series directed by Kim Hong-sun and written by Ryu Yong-jae.
                     </p>
                     <div className='flex gap-x-4'>

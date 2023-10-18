@@ -2,7 +2,6 @@ import { type FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Rating } from '@mantine/core'
-import thePhantomMenace from '@images/slider/thePhantomMenace.jpeg'
 import { BaseLayout } from '@layouts/base'
 import { IconChevronLeft, IconPlus } from '@tabler/icons-react'
 
@@ -26,7 +25,7 @@ const MovieDetailOrganisms: FC = () => {
 
                 <article className='w-full mt-6 flex flex-col items-center gap-6'>
                     {/* Movie Detail & Movie Cover */}
-                    <div className='flex flex-col-reverse md:flex-row gap-x-6'>
+                    <div className='flex flex-col-reverse lg:flex-row gap-x-6'>
                         {/* Movie Detail */}
                         <div className=' flex flex-col gap-y-6'>
                             {/* Movie Name */}
@@ -65,9 +64,9 @@ const MovieDetailOrganisms: FC = () => {
                         </div>
 
                         {/* Movie Cover */}
-                        <div className='w-full h-[300px] mb-6 md:mb-0 md:min-w-[300px] md:max-w-[300px] md:max-h-[300px] relative'>
+                        <div className='w-full h-[400px] mb-6 lg:mb-0 lg:min-w-[400px] lg:max-w-[300px] lg:max-h-[300px] relative'>
                             <Image
-                                src={thePhantomMenace.src}
+                                src={'https://i.pinimg.com/564x/c2/d2/19/c2d2194249f1540ae22c9d05d5dc2734.jpg'}
                                 fill
                                 className='object-cover rounded-lg top-1/2 -translate-y-1/2 h-full w-full'
                                 alt=''
