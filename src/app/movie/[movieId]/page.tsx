@@ -1,80 +1,9 @@
-'use client'
-import React, { type FC } from 'react'
-import Image from 'next/image'
-import { Button, Rating } from '@mantine/core'
-import imbdImg from '@images/base/imbd.png'
-import { IconPlus } from '@tabler/icons-react'
+import { type FC } from 'react'
 
-import { sliderData } from '@organisms/HomeOrganisms/Main/ComedySeries/resources'
+import { MovieDetailOrganisms } from '@organisms/MovieDetailOrganisms'
 
-import Comments from './components/Comments/Comments'
-import Wrapper from './components/Wrapper'
-const MovieDetail: FC<{ params: { movieId: string } }> = ({ params }) => {
-    /* MovieDetail = {params.movieId} */
-    const dataDetail = sliderData.find((items) => items.id === +params.movieId)
-
-    
-    if (dataDetail) {
-        return (
-            <Wrapper data={dataDetail}>
-                <div className='w-full grid items-center grid-cols-3 gap-x-5  text-graySecondary'>
-                    <div className='col-span-2 '>
-                        <div className='flex flex-col gap-y-2'>
-                            <span className='text-4xl font-bold text-white'>{dataDetail.title}</span>
-                            <Rating fractions={dataDetail.rate} defaultValue={dataDetail.rate} readOnly size='md' />
-                            <span className='text-sm font-bold'>10M+ views</span>
-                            <Image src={imbdImg.src} width={60} height={60} />
-
-                            <span className='text-sm'>{dataDetail?.detail}</span>
-
-                            <div className='w-full flex justify-start gap-x-4 mt-5'>
-                                {/* Add To WatchList Button */}
-                                <Button className='h-11  px-5 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary '>
-                                    <div className='flex items-center gap-2'>
-                                        <IconPlus size={20} />
-                                        <span>Watchlist</span>
-                                    </div>
-                                </Button>
-
-                                {/* Watch Button */}
-                                <Button className='  h-11 px-11 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
-                                    Watch Now
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-span-1 rounded-xl overflow-hidden flex items-center justify-center'>
-                        <img src={dataDetail.imageSrc} className='object-cover h-full  w-full' alt='' />
-                    </div>
-                </div>
-
-                {/* <Comments /> */}
-                {/* <span className='text-2xl font-bold mt-8 mb-5'>Comments</span>
-                <div className='w-full flex flex-col gap-y-2'>
-                    <div className='flex'>
-                        <div className='flex items-center justify-center rounded-full bg-blue-600'>1</div>
-                        <div className='flex flex-col'>
-                            <span>1</span>
-                            <span>1</span>
-                            <span>1</span>
-                        </div>
-                    </div>
-                </div> */}
-
-                <span className='text-2xl font-bold mt-8 mb-5 text-graySecondary'>Detail</span>
-            </Wrapper>
-        )
-    } else {
-        return (
-            <Wrapper>
-                <div className='flex items-center gap-x-1'>
-                    <span className='text-sm font-bold text-red-400'>Movie Detail Not Found </span>
-                    <span className='text-red-500'>:</span>
-                    <span className='text-red-600'>)</span>
-                </div>
-            </Wrapper>
-        )
-    }
+const MovieDetailPage: FC = () => {
+    return <MovieDetailOrganisms />
 }
 
-export default MovieDetail
+export default MovieDetailPage

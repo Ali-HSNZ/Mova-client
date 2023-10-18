@@ -1,4 +1,4 @@
- type THomeRatedMoviesData = {
+type THomeRatedMoviesData = {
     id: number
     title: string
     genre: string[]

@@ -7,8 +7,6 @@
 /* Tailwind */
 @import './vendors/tailwind.css';
 
-
-
 /* ----------- Base ----------- */
 /* Base */
 @import './base/base.css';

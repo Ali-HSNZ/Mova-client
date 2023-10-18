@@ -1,4 +1,4 @@
- type THomeNowTrendingData = {
+type THomeNowTrendingData = {
     id: number
     title: string
     genre: string[]

@@ -1,5 +1,9 @@
+import { type FC } from 'react'
+
 import { HomeTemplate } from '@templates/HomeTemplate'
 
-export default function Home() {
+const HomePage: FC = () => {
     return <HomeTemplate />
 }
+
+export default HomePage

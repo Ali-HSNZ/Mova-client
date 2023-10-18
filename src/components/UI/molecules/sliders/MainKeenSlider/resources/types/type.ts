@@ -1,4 +1,3 @@
-
 interface IMainKeenSliderProps {
     children: JSX.Element
 }
