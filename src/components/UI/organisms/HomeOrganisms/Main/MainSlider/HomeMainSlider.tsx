@@ -34,14 +34,14 @@ const HomeMainSlider: FC = () => {
                             title
                             {/* Action Buttons --> 'Watch Now' Button */}
                             <div className='select-none absolute bottom-5  right-4 z-10'>
-                                <Button className='bg-yellowPrimary text-black  xl:px-8 w-12 h-12 xl:w-auto xl:h-11 flex items-center justify-center cursor-pointer shadow-lg rounded-full xl:rounded-xl  '>
+                                <Button className='bg-yellowPrimary hover:bg-yellowSecondary duration-secondary text-black  xl:px-8 w-12 h-12 xl:w-auto xl:h-11 flex items-center justify-center cursor-pointer shadow-lg rounded-full xl:rounded-xl  '>
                                     <span className='text-dark-950  hidden xl:flex '>Watch Now</span>
                                     <IconPlayerPlay className='flex xl:hidden' />
                                 </Button>
                             </div>
                             {/* Action Buttons --> 'WatchList' Button */}
                             <div className='select-none absolute bottom-5 left-4 z-10'>
-                                <Button className='bg-grayPrimary text-whiteSecondary xl:px-8 w-12 h-12 xl:w-auto xl:h-11 flex items-center justify-center gap-x-4 shadow-lg rounded-full xl:rounded-xl cursor-pointer bg-opacity-primary	'>
+                                <Button className='bg-grayPrimary text-whiteSecondary xl:px-8 w-12 h-12 xl:w-auto xl:h-11 flex items-center justify-center gap-x-4 shadow-lg rounded-full xl:rounded-xl cursor-pointer bg-opacity-primary hover:bg-opacity-100 duration-secondary	'>
                                     <IconPlus />
                                     <span className='hidden xl:block font-medium'>Watchlist</span>
                                 </Button>

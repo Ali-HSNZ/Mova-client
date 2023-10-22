@@ -7,10 +7,7 @@ import { type IMovieCardProps } from './resources'
 
 const MovieCard: FC<IMovieCardProps> = ({ genreList = [], imageUrl = '', rate = 0, episode, title = '' }) => {
     return (
-        <article
-            style={{ minWidth: 220, maxWidth: 220 }}
-            className='keen-slider__slide h-[250px] rounded-2xl relative overflow-hidden'
-        >
+        <article style={{ minWidth: 220, maxWidth: 220 }} className='h-[250px] rounded-2xl relative overflow-hidden'>
             <div
                 className='filter brightness-secondary h-full w-full bg-center bg-cover'
                 style={{ backgroundImage: `url('${imageUrl}')` }}
@@ -32,14 +29,14 @@ const MovieCard: FC<IMovieCardProps> = ({ genreList = [], imageUrl = '', rate = 
                     {/* Action Buttons */}
                     <div className='flex justify-between gap-x-4 '>
                         {/* Add To WatchList Button */}
-                        <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary'>
+                        <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary hover:bg-opacity-100 duration-secondary'>
                             <IconPlus size={20} />
                         </Button>
 
                         {/* Watch Button */}
                         <Link
                             href={'/movie/id'}
-                            className='w-full flex text-sm justify-center items-center   shadow-lg font-bold rounded-md bg-yellowPrimary text-black'
+                            className='w-full flex text-sm justify-center items-center shadow-lg font-bold rounded-md bg-yellowPrimary hover:bg-yellowSecondary duration-secondary text-black'
                         >
                             Watch
                         </Link>

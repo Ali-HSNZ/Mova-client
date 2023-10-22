@@ -54,12 +54,12 @@ const HomeContinue: FC = () => {
                             {/* Action Buttons*/}
                             <div className='flex justify-between gap-x-4 '>
                                 {/* Drop Button */}
-                                <Button className='w-fit h-9 shadow-lg rounded-md bg-grayPrimary text-whitePrimary font-semibold'>
+                                <Button className='w-fit h-9 shadow-lg rounded-md bg-grayPrimary duration-secondary hover:bg-opacity-primary bg-opacity-100 text-whitePrimary font-semibold'>
                                     Drop
                                 </Button>
 
                                 {/* Watch Button */}
-                                <Button className='w-full h-9 shadow-lg rounded-md bg-yellowPrimary font-bold text-black'>
+                                <Button className='w-full h-9 shadow-lg rounded-md bg-yellowPrimary hover:bg-yellowSecondary duration-secondary font-bold text-black'>
                                     Watch
                                 </Button>
                             </div>

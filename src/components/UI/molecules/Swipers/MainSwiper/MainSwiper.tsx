@@ -35,7 +35,7 @@ const MainSwiper = ({ children }: { children: JSX.Element }) => {
     }, [])
 
     // Active button className
-    const activeButtonClass = 'text-whitePrimary bg-opacity-primary'
+    const activeButtonClass = 'text-whitePrimary bg-opacity-primary hover:bg-opacity-100 duration-secondary'
 
     // Disable button className
     const disableButtonClass = 'cursor-default text-grayPrimary bg-opacity-secondary'

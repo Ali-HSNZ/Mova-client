@@ -21,7 +21,7 @@ const HomeRecommendedForYou: FC = () => {
                         {['Comedy', 'Animation', 'War'].map((genre, index: number) => (
                             <span
                                 key={index}
-                                className='px-4 py-1.5 text-sm rounded-full bg-grayPrimary bg-opacity-secondary text-whitePrimary'
+                                className='px-4 py-1.5 text-sm rounded-full bg-grayPrimary bg-opacity-secondary hover:bg-opacity-100 duration-secondary cursor-pointer select-none text-whitePrimary'
                             >
                                 {genre}
                             </span>
@@ -34,10 +34,10 @@ const HomeRecommendedForYou: FC = () => {
                         series. The Korean series directed by Kim Hong-sun and written by Ryu Yong-jae.
                     </p>
                     <div className='flex gap-x-4'>
-                        <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary'>
+                        <Button className='w-fit h-11 shadow-lg rounded-md bg-grayPrimary duration-secondary bg-opacity-secondary hover:bg-opacity-100'>
                             <IconPlus size={20} />
                         </Button>
-                        <Button className='bg-yellowPrimary h-11 text-darkPrimary px-6'>
+                        <Button className='bg-yellowPrimary hover:bg-yellowSecondary duration-secondary h-11 text-darkPrimary px-6'>
                             <IconPlayerPlay size={18} />
                             <span className='pl-2 font-bold'>Watch</span>
                         </Button>

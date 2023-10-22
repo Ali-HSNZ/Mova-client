@@ -3,11 +3,11 @@ import { BaseLayout } from 'src/components/partials/layouts/base'
 
 import { HomeComedySeries } from '@organisms/HomeOrganisms/Main/ComedySeries'
 import { HomeMainSlider } from '@organisms/HomeOrganisms/Main/MainSlider'
-import { HomeMovieRating } from '@organisms/HomeOrganisms/Main/MovieRating'
 import { HomeNowTrending } from '@organisms/HomeOrganisms/Main/NowTrending'
 import { HomePopularMoviesOnMova } from '@organisms/HomeOrganisms/Main/PopularMoviesOnMova'
 import { HomePopularSeriesOnMova } from '@organisms/HomeOrganisms/Main/PopularSeriesOnMova'
 import { HomeRecommendedForYou } from '@organisms/HomeOrganisms/Main/RecommendedForYou'
+import { TopRatingMovies } from '@organisms/HomeOrganisms/Main/TopRatingMovies'
 import { HomeWarMovies } from '@organisms/HomeOrganisms/Main/WarMovies'
 import { HomeContinue } from '@organisms/HomeOrganisms/Side/Continue'
 import { HomeGenres } from '@organisms/HomeOrganisms/Side/Genres'
@@ -28,8 +28,8 @@ const HomeTemplate: FC = () => {
                     {/* Popular Series On Mova */}
                     <HomePopularSeriesOnMova />
 
-                    {/* Movie Rating */}
-                    <HomeMovieRating />
+                    {/* Top Rating Movies */}
+                    <TopRatingMovies />
 
                     {/* Recommended For You */}
                     <HomeRecommendedForYou />

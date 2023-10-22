@@ -42,12 +42,12 @@ const HomeTopRated: FC = () => {
                                     {/* Action Buttons */}
                                     <div className='flex justify-between gap-x-4 '>
                                         {/* Add To WatchList Button */}
-                                        <Button className='w-fit h-9 shadow-lg rounded-md bg-grayPrimary bg-opacity-secondary'>
+                                        <Button className='w-fit h-9 shadow-lg rounded-md bg-grayPrimary duration-secondary bg-opacity-secondary hover:bg-opacity-100'>
                                             <IconPlus size={20} />
                                         </Button>
 
                                         {/* Watch Button */}
-                                        <Button className='w-full h-9 shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
+                                        <Button className='w-full h-9 shadow-lg font-bold rounded-md bg-yellowPrimary hover:bg-yellowSecondary duration-secondary text-black'>
                                             Watch
                                         </Button>
                                     </div>

@@ -13,6 +13,10 @@ module.exports = {
                 primary: '.7',
                 full: '1',
             },
+            transitionDuration: {
+                primary: '350ms',
+                secondary: '200ms',
+            },
             colors: {
                 // Yellow
                 yellowPrimary: '#f8b319',
