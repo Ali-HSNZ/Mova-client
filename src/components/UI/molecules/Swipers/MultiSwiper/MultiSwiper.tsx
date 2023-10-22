@@ -116,7 +116,7 @@ const MultiSwiper: FC<IMultiSwiperProps> = ({
                 spaceBetween={spaceBetween}
                 ref={swiperRef}
                 {...swiperOption}
-                className='_multiSwiper rounded-lg relative select-none'
+                className='_multiSwiper  mt-4 relative select-none'
             >
                 {children}
             </Swiper>

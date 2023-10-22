@@ -1,19 +1,19 @@
 /* Bullets Parent */
 ._mainSwiper .swiper-pagination-bullets {
-    @apply px-3 py-2 rounded-md flex items-center bg-grayPrimary bg-opacity-secondary !w-fit !-translate-x-1/2 !left-1/2 !bottom-[30px]
+    @apply px-3 py-2 rounded-md flex items-center bg-grayPrimary bg-opacity-secondary !w-fit !-translate-x-1/2 !left-1/2 !bottom-[30px];
 }
 
 /* Each Bullets */
 ._mainSwiper .swiper-pagination-bullets .swiper-pagination-bullet {
-    @apply w-2.5 h-2.5 p-0 bg-graySecondary opacity-100
+    @apply w-2.5 h-2.5 p-0 bg-graySecondary opacity-100;
 }
 
 /* Active Bullet */
 ._mainSwiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
-    @apply bg-yellowPrimary opacity-100
+    @apply bg-yellowPrimary opacity-100;
 }
 
 /* For FreeMode Slide */
 ._multiSwiper .swiper-slide {
-    @apply !w-auto
+    @apply !w-auto;
 }

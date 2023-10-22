@@ -1,6 +1,7 @@
 import { type FC } from 'react'
+import { SwiperSlide } from 'swiper/react'
 
-import { MultiKeenSlider } from '@molecules/sliders/MultiKeenSlider'
+import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { MovieCard } from '@atoms/MovieCard'
 
@@ -8,26 +9,21 @@ import { sliderData, type THomeWarMoviesDetail } from './resources'
 
 const HomeWarMovies: FC = () => {
     return (
-        <MultiKeenSlider
-            keenSliderOptions={{
-                mode: 'free',
-                slides: { perView: 'auto', spacing: 25 },
-            }}
-            title='War Movies'
-        >
+        <MultiSwiper title='War Movies'>
             <>
                 {/* Render All Genres */}
                 {sliderData.map((movie: THomeWarMoviesDetail) => (
-                    <MovieCard
-                        key={movie.id}
-                        genreList={movie.genre}
-                        imageUrl={movie.imageSrc}
-                        title={movie.title}
-                        rate={movie.rate}
-                    />
+                    <SwiperSlide key={movie.id}>
+                        <MovieCard
+                            genreList={movie.genre}
+                            imageUrl={movie.imageSrc}
+                            title={movie.title}
+                            rate={movie.rate}
+                        />
+                    </SwiperSlide>
                 ))}
             </>
-        </MultiKeenSlider>
+        </MultiSwiper>
     )
 }
 

@@ -17,7 +17,7 @@ const HomeMainSlider: FC = () => {
             <>
                 {dataKeenSlider.map((movie: TMainKeenSliderData) => {
                     return (
-                        <SwiperSlide key={movie.id} className='keen-slider__slide'>
+                        <SwiperSlide key={movie.id}>
                             {/* movie Image */}
                             <Image
                                 src={movie.imageSrc}

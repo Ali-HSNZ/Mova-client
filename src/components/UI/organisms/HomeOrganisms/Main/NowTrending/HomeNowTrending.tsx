@@ -1,8 +1,7 @@
-'use client'
-
 import { type FC } from 'react'
+import { SwiperSlide } from 'swiper/react'
 
-import { MultiKeenSlider } from '@molecules/sliders/MultiKeenSlider'
+import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { Button } from '@atoms/Button'
 
@@ -10,45 +9,34 @@ import { sliderData, type THomeNowTrendingData } from './resources'
 
 const HomeNowTrending: FC = () => {
     return (
-        <MultiKeenSlider
-            keenSliderOptions={{
-                slides: {
-                    spacing: 30,
-                    perView: 'auto',
-                },
-                mode: 'free',
-            }}
-            title='Now Trending'
-        >
+        <MultiSwiper title='Now Trending'>
             <>
                 {sliderData.map((movie: THomeNowTrendingData) => (
-                    <article
-                        key={movie.id}
-                        style={{ minWidth: 300, maxWidth: 300 }}
-                        className='keen-slider__slide h-32 rounded-2xl relative'
-                    >
-                        {/* Movie Image */}
-                        <div
-                            className='filter brightness-secondary h-full w-full bg-center flex flex-col text-whitePrimary bg-cover'
-                            style={{ backgroundImage: `url('${movie.imageSrc}')` }}
-                        ></div>
+                    <SwiperSlide key={movie.id}>
+                        <article className='h-32 w-[300px] rounded-2xl overflow-hidden relative'>
+                            {/* Movie Image */}
+                            <div
+                                className='filter brightness-secondary h-full w-full bg-center flex flex-col text-whitePrimary bg-cover'
+                                style={{ backgroundImage: `url('${movie.imageSrc}')` }}
+                            ></div>
 
-                        <div className='absolute inset-0 w-full   flex flex-col justify-end'>
-                            {/* Action Button And Movie Detail */}
-                            <div className='w-full flex gap-x-4 items-center justify-between px-3 py-2 gap-y-2 bg-grayPrimary  bg-opacity-secondary'>
-                                {/* Movie Detail */}
-                                <p className='truncate'>{movie.title}</p>
+                            <div className='absolute inset-0 w-full   flex flex-col justify-end'>
+                                {/* Action Button And Movie Detail */}
+                                <div className='w-full flex gap-x-4 items-center justify-between px-3 py-2 gap-y-2 bg-grayPrimary  bg-opacity-secondary'>
+                                    {/* Movie Detail */}
+                                    <p className='truncate'>{movie.title}</p>
 
-                                {/* Watch Movie Button */}
-                                <Button className='h-9 px-4 bg-darkPrimary font-normal border-darkPrimary text-yellowPrimary  '>
-                                    Watch
-                                </Button>
+                                    {/* Watch Movie Button */}
+                                    <Button className='h-9 px-5 text-darkPrimary font-bold border-darkPrimary bg-yellowPrimary  '>
+                                        Watch
+                                    </Button>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </SwiperSlide>
                 ))}
             </>
-        </MultiKeenSlider>
+        </MultiSwiper>
     )
 }
 

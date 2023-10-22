@@ -37,7 +37,10 @@ const MovieCard: FC<IMovieCardProps> = ({ genreList = [], imageUrl = '', rate = 
                         </Button>
 
                         {/* Watch Button */}
-                        <Link href={'/movie/id'} className='w-full flex text-sm justify-center items-center   shadow-lg font-bold rounded-md bg-yellowPrimary text-black'>
+                        <Link
+                            href={'/movie/id'}
+                            className='w-full flex text-sm justify-center items-center   shadow-lg font-bold rounded-md bg-yellowPrimary text-black'
+                        >
                             Watch
                         </Link>
                     </div>

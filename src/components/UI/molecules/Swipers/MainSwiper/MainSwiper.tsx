@@ -72,7 +72,7 @@ const MainSwiper = ({ children }: { children: JSX.Element }) => {
             {/* Swiper */}
             <Swiper
                 pagination={{
-                    clickable: true, // Enable clickable pagination 
+                    clickable: true, // Enable clickable pagination
                 }}
                 onSlideChange={handleSlideChange}
                 modules={[Pagination, Navigation]}
