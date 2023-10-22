@@ -12,3 +12,8 @@
 ._mainSwiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
     @apply bg-yellowPrimary opacity-100
 }
+
+/* For FreeMode Slide */
+._multiSwiper .swiper-slide {
+    @apply !w-auto
+}
