@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* ---------------------- Vendors ---------------------- */
+
 
 /* Tailwind */
 @import './vendors/tailwind.css';
 
-/* ----------- Base ----------- */
+/* Swiper */
+@import './vendors/swiper.css';
+
+
+
+/* ---------------------- Base ---------------------- */
 /* Base */
 @import './base/base.css';

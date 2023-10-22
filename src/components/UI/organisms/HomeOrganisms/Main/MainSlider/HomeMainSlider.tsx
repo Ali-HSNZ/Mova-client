@@ -2,9 +2,10 @@
 
 import { type FC } from 'react'
 import Image from 'next/image'
+import { SwiperSlide } from 'swiper/react'
 import { IconPlayerPlay, IconPlus } from '@tabler/icons-react'
 
-import { MainKeenSlider } from '@molecules/sliders/MainKeenSlider'
+import { MainSwiper } from '@molecules/Swipers/MainSwiper'
 
 import { Button } from '@atoms/Button'
 
@@ -12,11 +13,11 @@ import { dataKeenSlider, type TMainKeenSliderData } from './resources'
 
 const HomeMainSlider: FC = () => {
     return (
-        <MainKeenSlider>
+        <MainSwiper>
             <>
                 {dataKeenSlider.map((movie: TMainKeenSliderData) => {
                     return (
-                        <div key={movie.id} className='keen-slider__slide'>
+                        <SwiperSlide key={movie.id} className='keen-slider__slide'>
                             {/* movie Image */}
                             <Image
                                 src={movie.imageSrc}
@@ -45,11 +46,11 @@ const HomeMainSlider: FC = () => {
                                     <span className='hidden xl:block font-medium'>Watchlist</span>
                                 </Button>
                             </div>
-                        </div>
+                        </SwiperSlide>
                     )
                 })}
             </>
-        </MainKeenSlider>
+        </MainSwiper>
     )
 }
 

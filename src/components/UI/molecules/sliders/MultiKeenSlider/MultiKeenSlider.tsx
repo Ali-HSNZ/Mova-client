@@ -81,6 +81,7 @@ const MultiKeenSlider: FC<IMultiKeenSliderProps> = ({
             </div>
 
             {/* Keen Slider Children */}
+            {/* Children Must be have 'keen-slider__slide' className */}
             <div ref={sliderRef} className='keen-slider mt-4 rounded-lg'>
                 {children}
             </div>
