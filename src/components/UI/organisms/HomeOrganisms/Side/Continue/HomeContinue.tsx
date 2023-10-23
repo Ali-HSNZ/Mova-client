@@ -7,13 +7,13 @@ import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 import { Button } from '@atoms/Button'
 import { Progress } from '@atoms/Progress'
 
-import { sliderData, type THomeContinueMovieData } from './resources'
+import { STATIC_DATA, type THomeContinueMovieData } from './resources'
 
 const HomeContinue: FC = () => {
     return (
         <MultiSwiper isMoreOption seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Continue'>
             <>
-                {sliderData.map((movie: THomeContinueMovieData) => (
+                {STATIC_DATA.map((movie: THomeContinueMovieData) => (
                     <SwiperSlide key={movie.id}>
                         <article className=' bg-[#16181E] w-[250px] flex flex-col p-3 rounded-2xl '>
                             {/* Movie Detail */}

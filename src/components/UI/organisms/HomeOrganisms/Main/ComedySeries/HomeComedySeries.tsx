@@ -5,14 +5,14 @@ import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { MovieCard } from '@atoms/MovieCard'
 
-import { sliderData, type THomeComedySeriesDetail } from './resources'
+import { SLIDER_DATA, type THomeComedySeriesDetail } from './resources'
 
 const HomeComedySeries: FC = () => {
     return (
         <MultiSwiper title='Comedy Series'>
             <>
                 {/* Render All Genres */}
-                {sliderData.map((movie: THomeComedySeriesDetail) => (
+                {SLIDER_DATA.map((movie: THomeComedySeriesDetail) => (
                     <SwiperSlide key={movie.id}>
                         <MovieCard
                             genreList={movie.genre}

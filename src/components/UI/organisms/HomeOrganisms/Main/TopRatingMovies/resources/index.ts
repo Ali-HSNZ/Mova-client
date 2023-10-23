@@ -1,4 +1,4 @@
-import homeTopRatingMoviesData from './data/data'
+import STATIC_DATA from './data/static-data.json'
 import type THomeTopRatingMoviesDetail from './types/type'
 
-export { type THomeTopRatingMoviesDetail, homeTopRatingMoviesData }
+export { type THomeTopRatingMoviesDetail, STATIC_DATA }

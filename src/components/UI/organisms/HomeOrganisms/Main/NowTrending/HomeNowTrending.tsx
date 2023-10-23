@@ -5,13 +5,13 @@ import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { Button } from '@atoms/Button'
 
-import { sliderData, type THomeNowTrendingData } from './resources'
+import { STATIC_DATA, type THomeNowTrendingData } from './resources'
 
-const HomeNowTrending: FC = () => {
+const HomeNowTrending: FC = () => {     
     return (
         <MultiSwiper title='Now Trending'>
             <>
-                {sliderData.map((movie: THomeNowTrendingData) => (
+                {STATIC_DATA.map((movie: THomeNowTrendingData) => (
                     <SwiperSlide key={movie.id}>
                         <article className='h-32 w-[300px] rounded-2xl overflow-hidden relative'>
                             {/* Movie Image */}

@@ -2,14 +2,14 @@ import { type FC } from 'react'
 
 import { Button } from '@atoms/Button'
 
-import { homeTopRatingMoviesData, type THomeTopRatingMoviesDetail } from './resources'
+import { STATIC_DATA, type THomeTopRatingMoviesDetail } from './resources'
 
 const TopRatingMovies: FC = () => {
     return (
         <div>
             <h1 className={`font-bold text-xl text-whitePrimary`}>Top Rating Movies</h1>
             <section className='w-full mt-4 grid md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2 gap-4'>
-                {homeTopRatingMoviesData.map((movie: THomeTopRatingMoviesDetail, index: number) => (
+                {STATIC_DATA.map((movie: THomeTopRatingMoviesDetail, index: number) => (
                     <div
                         key={movie.id}
                         className='bg-darkPrimary border-[5px] border-darkSecondary rounded-lg py-2 px-4 flex justify-between items-center'

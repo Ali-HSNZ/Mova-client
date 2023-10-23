@@ -9,13 +9,13 @@ import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
 import { Button } from '@atoms/Button'
 
-import { sliderData, type THomeRatedMoviesData } from './resources'
+import { STATIC_DATA, type THomeRatedMoviesData } from './resources'
 
 const HomeTopRated: FC = () => {
     return (
         <MultiSwiper isMoreOption seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Top Rated'>
             <>
-                {sliderData.map((movie: THomeRatedMoviesData) => (
+                {STATIC_DATA.map((movie: THomeRatedMoviesData) => (
                     <SwiperSlide key={movie.id}>
                         <article className='h-36 w-[280px] rounded-2xl overflow-hidden relative'>
                             {/* Movie Image */}

@@ -9,14 +9,14 @@ import { MainSwiper } from '@molecules/Swipers/MainSwiper'
 
 import { Button } from '@atoms/Button'
 
-import { staticData, type TMainSwiperData } from './resources'
+import { STATIC_DATA, type TMainSwiperData } from './resources'
 import { type IHomeMainSliderProps } from './resources/types/type'
 
 const HomeMainSlider: FC<IHomeMainSliderProps> = ({ isOpenedSidebar }) => {
     return (
         <MainSwiper>
             <>
-                {staticData.map((movie: TMainSwiperData) => {
+                {STATIC_DATA.map((movie: TMainSwiperData) => {
                     return (
                         <SwiperSlide key={movie.id}>
                             <div className={`${isOpenedSidebar ? 'h-[320px]' : 'h-[450px]'}`}>

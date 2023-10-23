@@ -1,4 +1,4 @@
-import sliderData from './data/data'
+import SLIDER_DATA from './data/static-data.json'
 import type THomeComedySeriesDetail from './types/type'
 
-export { type THomeComedySeriesDetail, sliderData }
+export { type THomeComedySeriesDetail, SLIDER_DATA }

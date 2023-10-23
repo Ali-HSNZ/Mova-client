@@ -7,14 +7,14 @@ import { SwiperSlide } from 'swiper/react'
 
 import { MultiSwiper } from '@molecules/Swipers/MultiSwiper'
 
-import { sliderData, type THomeGenreDetail, type THomeGenreMoviesData } from './resources'
+import { STATIC_DATA, type THomeGenreDetail, type THomeGenreMoviesData } from './resources'
 
 const HomeGenres: FC = () => {
     return (
         <MultiSwiper isMoreOption seeMoreLinkHref='#' seeMoreLinkTitle='See More' title='Genres'>
             <>
                 {/* Render All Genres */}
-                {sliderData.map((category: THomeGenreMoviesData) => (
+                {STATIC_DATA.map((category: THomeGenreMoviesData) => (
                     <SwiperSlide key={category.id}>
                         <article className='w-[260px] h-[260px] flex flex-col gap-y-4'>
                             {category.genres.map((genreDetail: THomeGenreDetail) => (
