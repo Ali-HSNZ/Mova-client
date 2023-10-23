@@ -3,8 +3,7 @@ type TMainKeenSliderData = {
     title: string
     imageSrc: string
 }
-interface IMainKeenSliderProps {
-    dataKeenSlider: TMainKeenSliderData[]
+interface IHomeMainSliderProps {
+    isOpenedSidebar: boolean
 }
-
-export type { IMainKeenSliderProps, TMainKeenSliderData }
+export type { TMainKeenSliderData, IHomeMainSliderProps }

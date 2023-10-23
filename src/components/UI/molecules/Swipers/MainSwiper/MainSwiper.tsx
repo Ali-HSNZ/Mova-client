@@ -78,7 +78,7 @@ const MainSwiper = ({ children }: { children: JSX.Element }) => {
                 modules={[Pagination, Navigation]}
                 spaceBetween={10}
                 ref={swiperRef}
-                className='_mainSwiper relative h-[320px] rounded-lg'
+                className='_mainSwiper relative  rounded-lg'
             >
                 {children}
             </Swiper>

@@ -35,40 +35,40 @@ const sliderData: THomeGenreMoviesData[] = [
             },
         ],
     },
-    {
-        id: 2,
-        genres: [
-            {
-                id: 0,
-                title: 'Adventure',
-                imageSrc: 'https://i.pinimg.com/564x/47/28/07/4728077084f1bb12d4e7c70243adce5f.jpg',
-                href: '#',
-            },
-            {
-                id: 1,
-                title: 'Comedy',
-                imageSrc: 'https://i.pinimg.com/564x/0f/95/ff/0f95ff1ae0eedd9489acefb3005f32f7.jpg',
-                href: '#',
-            },
-        ],
-    },
-    {
-        id: 3,
-        genres: [
-            {
-                id: 0,
-                title: 'Scary',
-                imageSrc: 'https://i.pinimg.com/564x/6f/3b/e1/6f3be1eb17b1ef00e762f39aef573339.jpg',
-                href: '#',
-            },
-            {
-                id: 1,
-                title: 'Science Fiction',
-                imageSrc: 'https://i.pinimg.com/736x/49/63/c9/4963c9624d02762dff62f7d1484149ff.jpg',
-                href: '#',
-            },
-        ],
-    },
+    // {
+    //     id: 2,
+    //     genres: [
+    //         {
+    //             id: 0,
+    //             title: 'Adventure',
+    //             imageSrc: 'https://i.pinimg.com/564x/47/28/07/4728077084f1bb12d4e7c70243adce5f.jpg',
+    //             href: '#',
+    //         },
+    //         {
+    //             id: 1,
+    //             title: 'Comedy',
+    //             imageSrc: 'https://i.pinimg.com/564x/0f/95/ff/0f95ff1ae0eedd9489acefb3005f32f7.jpg',
+    //             href: '#',
+    //         },
+    //     ],
+    // },
+    // {
+    //     id: 3,
+    //     genres: [
+    //         {
+    //             id: 0,
+    //             title: 'Scary',
+    //             imageSrc: 'https://i.pinimg.com/564x/6f/3b/e1/6f3be1eb17b1ef00e762f39aef573339.jpg',
+    //             href: '#',
+    //         },
+    //         {
+    //             id: 1,
+    //             title: 'Science Fiction',
+    //             imageSrc: 'https://i.pinimg.com/736x/49/63/c9/4963c9624d02762dff62f7d1484149ff.jpg',
+    //             href: '#',
+    //         },
+    //     ],
+    // },
 ]
 
 export default sliderData
