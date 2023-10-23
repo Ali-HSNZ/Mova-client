@@ -20,7 +20,6 @@
         "@mantine/core": "^6.0.20",
         "@mantine/hooks": "^6.0.20",
         "@tabler/icons-react": "^2.34.0",
-        "keen-slider": "^6.8.6",
         "next": "^13.5.4",
         "react": "18.2.0",
         "react-dom": "18.2.0",

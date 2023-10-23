@@ -1,4 +1,4 @@
-type TMainKeenSliderData = {
+type TMainSwiperData = {
     id: number
     title: string
     imageSrc: string
@@ -6,4 +6,4 @@ type TMainKeenSliderData = {
 interface IHomeMainSliderProps {
     isOpenedSidebar: boolean
 }
-export type { TMainKeenSliderData, IHomeMainSliderProps }
+export type { TMainSwiperData, IHomeMainSliderProps }

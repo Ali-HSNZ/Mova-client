@@ -1,6 +1,6 @@
-import { type TMainKeenSliderData } from '..'
+import { type TMainSwiperData } from '..'
 
-const dataKeenSlider: TMainKeenSliderData[] = [
+const staticData: TMainSwiperData[] = [
     {
         id: 0,
         title: 'Kingsman',
@@ -18,4 +18,4 @@ const dataKeenSlider: TMainKeenSliderData[] = [
     },
 ]
 
-export default dataKeenSlider
+export default staticData
